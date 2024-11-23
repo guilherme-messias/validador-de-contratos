@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+    <script src="/src/index.js" defer></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Projeto 1</h1>
+    <label for="units">Unidade:</label>
+    <select id="units">
+      <option>Selecione</option>
+      <option value="cplug">Cplug</option>
+      <option value="kinghost">KingHost</option>
+      <option value="deliveryDireto">Delivery Direto</option>
+      <option value="melhorEnvio">Melhor Envio</option>
+      <option value="lwsa">LWSA</option>
+      <option value="allIn">All In</option>
+      <option value="nextios">Nextios</option>
+      <option value="octadesk">Octadesk</option></select
+    ><br /><br />
+
+    <div id="workModalityDiv" class="hidden">
+      <label for="workModality">Modalidade de trabalho:</label>
+      <select id="workModality">
+        <option value="hybrid">Híbrido</option>
+        <option value="office">Presencial</option>
+        <option value="homeOffice">Home Office</option>
+        <option value="remote">Teletrabalho</option></select
+      ><br /><br />
+    </div>
+
+    <div id="careerLevelDiv" class="hidden">
+      <label for="careerLevel">Nível de carreira:</label>
+      <select id="careerLevel">
+        <option value="others">Outros</option>
+        <option value="coordinator">Coordenador</option>
+        <option value="manager">Gerente</option>
+        <option value="techLead">Tech Lead</option></select
+      ><br /><br />
+    </div>
+
+    <div id="departmentDiv" class="hidden">
+      <label for="department">Departamento:</label>
+      <select id="department">
+        <option value="others">Outros</option>
+        <option value="sales">Vendas</option>
+        <option value="preSales">Pré-vendas</option></select
+      ><br /><br />
+    </div>
+
+    <div id="buttonDiv" class="hidden">
+      <button id="submit">Enviar</button>
+    </div>
+
+    <div id="result"></div>
+  </body>
+</html>
