@@ -1,3 +1,6 @@
+const octadeskContractValidation = require("./octadeskContractValidation");
+
+// De acordo com a unidade selecionada, o sistema deve exibir os campos de acordo com a necessidade de cada unidade.
 const units = document.getElementById("units");
 units.addEventListener("change", function () {
   let buttonDiv = document.getElementById("buttonDiv");
@@ -23,49 +26,7 @@ units.addEventListener("change", function () {
   }
 });
 
-let contractCodes = "emp - TERMOS COLABORADORES - OCTADESK (36546)" + "\n";
-
-const button = document.querySelector("#submit");
-
-button.addEventListener("click", () => {
-  const workModality = document.querySelector("#workModality").value;
-  const careerLevel = document.querySelector("#careerLevel").value;
-  const department = document.querySelector("#department").value;
-
-  octadeskValidationContract(workModality);
-  octadeskValidationContractualAmendments(careerLevel, department);
-
-  console.log(contractCodes);
-  contractCodes = "" + "\n" + "emp - TERMOS COLABORADORES - OCTADESK (36546)" + "\n";
-});
-
-function octadeskValidationContract(workModality) {
-  if (workModality === "hybrid") {
-    contractCodes += "emp - CONTRATO HÍBRIDO - OCTADESK (34524)" + "\n";
-  } else if (workModality === "homeOffice") {
-    contractCodes += "emp - CONTRATO TELETRABALHO - OCTADESK (33169)" + "\n";
-  } else {
-    contractCodes += "CONTRATO NÃO EXISTENTE!" + "\n";
-  }
-}
-
-function octadeskValidationContractualAmendments(careerLevel, department) {
-  if (careerLevel === "coordinator" || careerLevel === "manager" || careerLevel === "techLead") {
-    contractCodes += "*Aditivo Cargo de Confiança () - 36545" + "\n";
-  }
-
-  if (department === "preSales") {
-    contractCodes += "*Aditivo SDR A.E. (cargos diretoria pre vendas) - 36552" + "\n";
-  }
-
-  if (department === "sales" && careerLevel !== "coordinator") {
-    contractCodes += "*Aditivo AE (cargos diretoria 'vendas') - 36551" + "\n";
-  }
-
-  if (department === "sales" && careerLevel === "coordinator") {
-    contractCodes += "*ADITIVO TEAM LEADER A.E. (coordenador de 'vendas') - 36550" + "\n";
-  }
-}
+octadeskContractValidation();
 
 // criar a logica dos modulos para cada unidade
 // adicionar demais unidades
