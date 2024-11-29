@@ -32,13 +32,28 @@
       ><br /><br />
     </div>
 
+    <div id="contractTypeDiv" class="hidden">
+      <label for="contractType">Nível de carreira:</label>
+      <select id="contractType">
+        <option value="apprentice">Aprendiz</option>
+        <option value="inter">Estagiário</option>
+        <option value="permanent">Indeterminado</option>
+        <option value="temporary">Determinado</option>
+        </select
+      ><br /><br />
+    </div>
+
     <div id="careerLevelDiv" class="hidden">
       <label for="careerLevel">Nível de carreira:</label>
       <select id="careerLevel">
         <option value="others">Outros</option>
+        <option value="specialist-I">Especialista I</option>
+        <option value="specialist-II">Especialista II</option>
         <option value="coordinator">Coordenador</option>
         <option value="manager">Gerente</option>
-        <option value="techLead">Tech Lead</option></select
+        <option value="techLead">Tech Lead</option>
+        <option value="director">Diretor</option>
+        </select
       ><br /><br />
     </div>
 
@@ -46,6 +61,7 @@
       <label for="department">Departamento:</label>
       <select id="department">
         <option value="others">Outros</option>
+        <option value="nextios">Nextios</option>
         <option value="sales">Vendas</option>
         <option value="preSales">Pré-vendas</option></select
       ><br /><br />
@@ -54,6 +70,8 @@
     <div id="buttonDiv" class="hidden">
       <button id="submit">Enviar</button>
     </div>
+
+    <!-- TODO: Adicionar campo cargo lw, e se é ou não cargo de confiança me -->
 
     <div id="result"></div>
   </body>

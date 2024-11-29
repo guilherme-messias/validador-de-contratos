@@ -34,4 +34,4 @@ function meContractValidation() {
   }
 }
 
-meContractValidation();
+module.exports = meContractValidation;
