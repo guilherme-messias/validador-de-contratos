@@ -1,8 +1,8 @@
 let contractCodes = "";
 
 function cplugValidation() {
-  cplugContractFilter("inter", "p", "i");
-  function cplugContractFilter(contractType, carrerLevel, department) {
+  cplugContractFilters("inter", "p", "i");
+  function cplugContractFilters(contractType, carrerLevel, department) {
     if (contractType !== "apprentice" && contractType !== "inter") {
       contractCodes += "NO AGUARDO DO CONTRATO CERTO!!!" + "\n";
     }
