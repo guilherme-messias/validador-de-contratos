@@ -1,7 +1,7 @@
 let contractCodes = "";
 
-function cplugValidation() {
-  cplugContractFilters("inter", "p", "i");
+function cplugContractValidation() {
+  cplugContractFilters("r", "coordinator", "inside-sales");
   function cplugContractFilters(contractType, carrerLevel, department) {
     if (contractType !== "apprentice" && contractType !== "inter") {
       contractCodes += "NO AGUARDO DO CONTRATO CERTO!!!" + "\n";
@@ -22,7 +22,7 @@ function cplugValidation() {
 
     contractCodes += "emp - TERMOS COLABORADORES - CPLUG (36667)" + "\n";
   }
+  return contractCodes;
 }
 
-cplugValidation();
-console.log(contractCodes);
+module.exports = cplugContractValidation;

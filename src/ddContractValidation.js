@@ -14,7 +14,7 @@ function ddContractValidation() {
     }
     contractCodes += "emp - TERMOS COLABORADORES - DD (36848)" + "\n";
   }
+  return contractCodes;
 }
 
-ddContractValidation();
-console.log(contractCodes);
+module.exports = ddContractValidation;

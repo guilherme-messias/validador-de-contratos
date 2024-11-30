@@ -56,7 +56,8 @@ function kinghostContractValidation() {
       "emp - 'TERMO DE CONFIDENCIALIDADE (30172)" +
       "\n";
   }
+
+  return contractCodes;
 }
 
-kinghostContractValidation();
-console.log(contractCodes);
+module.exports = kinghostContractValidation;

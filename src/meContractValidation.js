@@ -35,8 +35,7 @@ function meContractValidation() {
     }
     contractCodes += "emp - TERMOS COLABORADORES - MELHOR ENVIO (36715)" + "\n";
   }
+  return contractCodes;
 }
 
-meContractValidation();
-console.log(contractCodes);
-// module.exports = meContractValidation;
+module.exports = meContractValidation;

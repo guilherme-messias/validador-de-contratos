@@ -15,9 +15,6 @@ function lwContractValidation() {
   //   });
   // }
 
-
-  
-
   // EXEMPLO PROVISÓRIO PARA ACIONAR A LÓGICA DE VALIDAÇÃO
   lwContractFilters("office", "director", "nextios", "permanent", "CONSULTOR DE RETENCAO");
 
@@ -172,8 +169,7 @@ function lwContractValidation() {
 
     contractCodes += "emp - TERMOS COLABORADORES - LWSA (36833)" + "\n";
   }
+  return contractCodes;
 }
 
-lwContractValidation();
-
-console.log(contractCodes);
+module.exports = lwContractValidation;

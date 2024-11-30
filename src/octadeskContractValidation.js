@@ -50,9 +50,8 @@ function octadeskContractValidation() {
   }
 
   octadeskContractFilters("hybrid", "coordinator", "sales", "inter");
+  return contractCodes;
 }
 
-octadeskContractValidation();
-console.log(contractCodes);
 
-// module.exports = octadeskContractValidation;
+module.exports = octadeskContractValidation;
