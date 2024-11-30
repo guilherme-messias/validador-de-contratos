@@ -9,6 +9,7 @@
   </head>
   <body>
     <h1>Projeto 1</h1>
+    <!-- Selecionar Unidade -->
     <label for="units">Unidade:</label>
     <select id="units">
       <option>Selecione</option>
@@ -22,18 +23,9 @@
       <option value="octadesk">Octadesk</option></select
     ><br /><br />
 
-    <div id="workModalityDiv" class="hidden">
-      <label for="workModality">Modalidade de trabalho:</label>
-      <select id="workModality">
-        <option value="hybrid">Híbrido</option>
-        <option value="office">Presencial</option>
-        <option value="homeOffice">Home Office</option>
-        <option value="remote">Teletrabalho</option></select
-      ><br /><br />
-    </div>
-
+    <!-- Selecionar tipo de contrato -->
     <div id="contractTypeDiv" class="hidden">
-      <label for="contractType">Nível de carreira:</label>
+      <label for="contractType">Tipo de contrato:</label>
       <select id="contractType">
         <option value="apprentice">Aprendiz</option>
         <option value="inter">Estagiário</option>
@@ -43,6 +35,18 @@
       ><br /><br />
     </div>
 
+    <!-- Selecionar modalidade de trabalho -->
+    <div id="workModalityDiv" class="hidden">
+      <label for="workModality">Modalidade de trabalho:</label>
+      <select id="workModality">
+        <option value="hybrid">Híbrido</option>
+        <option value="office">Presencial</option>
+        <option value="homeOffice">Home Office</option>
+      ><br /><br />
+    </div>
+
+
+    <!-- Selecionar nível de carreira -->
     <div id="careerLevelDiv" class="hidden">
       <label for="careerLevel">Nível de carreira:</label>
       <select id="careerLevel">
@@ -57,6 +61,7 @@
       ><br /><br />
     </div>
 
+    <!-- Selecionar departamento -->
     <div id="departmentDiv" class="hidden">
       <label for="department">Departamento:</label>
       <select id="department">
@@ -67,6 +72,14 @@
       ><br /><br />
     </div>
 
+    <!-- Preenchimento nome cargo -->
+    <div id="positionDiv" class="hidden">
+      <label for="position">Cargo:</label>
+      <input type="text" id="position" /><br /><br />
+      
+    </div>
+
+    <!-- Apresentar resultados dinamicamente -->
     <div id="buttonDiv" class="hidden">
       <button id="submit">Enviar</button>
     </div>
