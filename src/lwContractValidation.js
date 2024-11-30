@@ -1,4 +1,4 @@
-let contractCodes = "emp - TERMOS COLABORADORES - LWSA (36833)" + "\n";
+let contractCodes = "";
 
 function lwContractValidation() {
   // function processUserInputForValidation() {
@@ -15,8 +15,21 @@ function lwContractValidation() {
   //   });
   // }
 
-  lwContractFilters("office", "coordinator", "sales");
+
+  
+
+  // EXEMPLO PROVISÓRIO PARA ACIONAR A LÓGICA DE VALIDAÇÃO
+  lwContractFilters("office", "director", "nextios", "permanent", "CONSULTOR DE RETENCAO");
+
   function lwContractFilters(workModality, careerLevel, department, contractType, position) {
+    // Formatar valor contendo a função para que seja possível comparar com o valor esperado
+    function normalizePosition(position) {
+      return position
+        .toUpperCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "-");
+    }
+
     // Validação contratos
     function lwContractFiltersHybrid(careerLevel, contractType) {
       if (
@@ -98,21 +111,69 @@ function lwContractValidation() {
       }
     }
 
-    // Validação aditivos de cargos e departamentos
     if (contractType !== "apprentice" && contractType !== "inter") {
+      // Validação de contratos por modalidade de trabalho
+      if (workModality === "hybrid") {
+        lwContractFiltersHybrid(careerLevel, contractType);
+      }
+
+      if (workModality === "homeOffice") {
+        lwContractFiltersHomeOffice(careerLevel, contractType);
+      }
+
+      if (workModality === "office") {
+        lwContractFiltersOffice(careerLevel, contractType);
+      }
+
+      // Validação termos por nível de carreira
+      if (careerLevel === "director") {
+        contractCodes +=
+          "DIRETORES - emp - TERMO DE SOLICITAÇÃO DE VEÍCULO CORPORATIVO - LWSA (36797)" + "\n";
+      }
+
+      // Validação de aditivos por meio da nomenclatura de cargo
+      if (normalizePosition(position).includes("CONSULTOR DE VENDAS ONLINE")) {
+        contractCodes +=
+          "ADITIVO AO CONTRATO DE TRABALHO_Consultor de Vendas Inside Sales - 36755" + "\n";
+      }
+
+      if (normalizePosition(position).includes("EXECUTIVO DE VENDAS ONLINE I")) {
+        contractCodes +=
+          "ADITIVO AO CONTRATO DE TRABALHO_Executivo de Vendas Inside Sales - 36756" + "\n";
+      }
+
+      if (normalizePosition(position).includes("COORDENADOR DE VENDAS ONLINE II")) {
+        contractCodes +=
+          "ADITIVO AO CONTRATO DE TRABALHO_Coordenadores Inside Sales - 36757" + "\n";
+      }
+
+      if (
+        normalizePosition(position).includes("CONSULTOR DE RETENCAO") ||
+        normalizePosition(position).includes("EXECUTIVO DE RETENCAO") ||
+        normalizePosition(position).includes("COORDENADOR DE RETENCAO")
+      ) {
+        contractCodes +=
+          "ADITIVO NOVOS CONTRATADOS - COSTUMER CARE  2023 + POLÍTICA - 36758" + "\n";
+      }
+
+      if (
+        (normalizePosition(position).includes("COMERCIAL") && department === "nextios") ||
+        (normalizePosition(position).includes("VENDAS") && department === "nextios")
+      ) {
+        contractCodes += "ADITIVO COMERCIAL NEXTIOS + POLÍTICA COMERCIAL NEXTIOS - 36760" + "\n";
+      }
+
+      if (normalizePosition(position).includes("PRE VENDAS") && department === "nextios") {
+        contractCodes += "ADITIVO LOCAWEB RV TSP + POLÍTICA TSP - 36759" + "\n";
+      }
+
       contractCodes += "VR: emp - *AUTORIZAÇÃO DE DESCONTO VALE REFEIÇÃO (30518)" + "\n";
     }
 
-    if (careerLevel === "director") {
-      contractCodes +=
-        "DIRETORES - emp - TERMO DE SOLICITAÇÃO DE VEÍCULO CORPORATIVO - LWSA (36797)" + "\n";
-    }
-
-    // TODO seguir com validação dos aditivos lw
-
+    contractCodes += "emp - TERMOS COLABORADORES - LWSA (36833)" + "\n";
   }
-
-  // TODO acionar todas as mini funções de validação
 }
 
 lwContractValidation();
+
+console.log(contractCodes);

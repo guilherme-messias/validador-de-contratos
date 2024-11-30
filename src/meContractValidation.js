@@ -1,4 +1,4 @@
-let contractCodes = "emp - TERMOS COLABORADORES - MELHOR ENVIO (36715)" + "\n";
+let contractCodes = "";
 
 function meContractValidation() {
   // function processUserInputForValidation() {
@@ -11,27 +11,32 @@ function meContractValidation() {
   //   });
   // }
 
-  meContractFilters("office", "coordinator", "sales");
-  function meContractFilters(monthlyHours, trustedPosition) {
-    // Validação contratos
-    if (monthlyHours === 150) {
-      contractCodes +=
-        "emp - CONTRATO 45/45 JORNADA 30 HORAS / 150 MENSAIS - MELHOR ENVIO (36717)" + "\n";
-    } else if (monthlyHours === 180) {
-      contractCodes +=
-        "emp - CONTRATO 45/45 JORNADA 36 HORAS/180 MENSAIS - MELHOR ENVIO (36719)" + "\n";
-    } else if (monthlyHours === 200) {
-      contractCodes +=
-        "emp - CONTRATO 45/45 JORNADA 40 HORAS/200 MENSAIS - MELHOR ENVIO (36718)" + "\n";
-    } else {
-      contractCodes += "CONTRATO NÃO EXISTE!" + "\n";
-    }
+  meContractFilters(180, "yes", "e");
+  function meContractFilters(monthlyHours, trustedPosition, contractType) {
+    if (contractType !== "apprentice" && contractType !== "inter") {
+      // Validação contratos
+      if (monthlyHours === 150) {
+        contractCodes +=
+          "emp - CONTRATO 45/45 JORNADA 30 HORAS / 150 MENSAIS - MELHOR ENVIO (36717)" + "\n";
+      } else if (monthlyHours === 180) {
+        contractCodes +=
+          "emp - CONTRATO 45/45 JORNADA 36 HORAS/180 MENSAIS - MELHOR ENVIO (36719)" + "\n";
+      } else if (monthlyHours === 200) {
+        contractCodes +=
+          "emp - CONTRATO 45/45 JORNADA 40 HORAS/200 MENSAIS - MELHOR ENVIO (36718)" + "\n";
+      } else {
+        contractCodes += "CONTRATO NÃO EXISTE!" + "\n";
+      }
 
-    // Validação aditivos de cargos
-    if (trustedPosition === "yes") {
-      contractCodes += "emp - TERMO CARGO DE CONFIANCA 60/40 - MELHOR ENVIO (36716)" + "\n";
+      // Validação aditivos de cargos
+      if (trustedPosition === "yes") {
+        contractCodes += "emp - TERMO CARGO DE CONFIANCA 60/40 - MELHOR ENVIO (36716)" + "\n";
+      }
     }
+    contractCodes += "emp - TERMOS COLABORADORES - MELHOR ENVIO (36715)" + "\n";
   }
 }
 
-module.exports = meContractValidation;
+meContractValidation();
+console.log(contractCodes);
+// module.exports = meContractValidation;
