@@ -1,6 +1,6 @@
 let contractCodes = "";
 
-function cplugContractValidation() {
+export function cplugContractValidation() {
   cplugContractFilters("r", "coordinator", "inside-sales");
   function cplugContractFilters(contractType, carrerLevel, department) {
     if (contractType !== "apprentice" && contractType !== "inter") {
@@ -24,5 +24,3 @@ function cplugContractValidation() {
   }
   return contractCodes;
 }
-
-module.exports = cplugContractValidation;

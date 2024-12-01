@@ -1,6 +1,6 @@
 let contractCodes = "";
 
-function kinghostContractValidation() {
+export function kinghostContractValidation() {
   kinghostContractFilters("remote", "coordinator", "r");
   function kinghostContractFilters(workModality, careerLevel, contractType) {
     if (contractType !== "apprentice" && contractType !== "inter") {
@@ -59,5 +59,3 @@ function kinghostContractValidation() {
 
   return contractCodes;
 }
-
-module.exports = kinghostContractValidation;

@@ -1,6 +1,6 @@
 let contractCodes = "";
 
-function lwsaContractValidation() {
+export function lwsaContractValidation() {
   // function processUserInputForValidation() {
   //  document.querySelector("#submit").addEventListener("click", () => {
   //     const workModality = document.querySelector("#workModality").value;
@@ -171,5 +171,3 @@ function lwsaContractValidation() {
   }
   return contractCodes;
 }
-
-module.exports = lwsaContractValidation;

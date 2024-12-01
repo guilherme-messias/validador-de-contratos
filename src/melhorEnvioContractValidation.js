@@ -1,6 +1,6 @@
 let contractCodes = "";
 
-function melhorEnvioContractValidation() {
+export function melhorEnvioContractValidation() {
   // function processUserInputForValidation() {
   //  document.querySelector("#submit").addEventListener("click", () => {
   //     const monthlyHours = document.querySelector("#monthlyHours").value;
@@ -37,5 +37,3 @@ function melhorEnvioContractValidation() {
   }
   return contractCodes;
 }
-
-module.exports = melhorEnvioContractValidation;

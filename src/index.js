@@ -1,9 +1,9 @@
-// const cplugContractValidation = require("./cplugContractValidation");
-// const deliveryDiretoContractValidation = require("./deliveryDiretoContractValidation");
-// const kinghostContractValidation = require("./kinghostContractValidation");
-// const lwsaContractValidation = require("./lwsaContractValidation");
-// const melhorEnvioContractValidation = require("./melhorEnvioContractValidation");
-// const octadeskContractValidation = require("./octadeskContractValidation");
+import cplugContractValidation from "./cplugContractValidation.js";
+import deliveryDiretoContractValidation from "./deliveryDiretoContractValidation.js";
+import kinghostContractValidation from "./kinghostContractValidation.js";
+import lwsaContractValidation from "./lwsaContractValidation.js";
+import melhorEnvioContractValidation from "./melhorEnvioContractValidation.js";
+import octadeskContractValidation from "./octadeskContractValidation.js";
 
 // De acordo com a unidade selecionada, o sistema deve exibir os campos de acordo com a necessidade de cada unidade.
 const units = document.getElementById("units");
