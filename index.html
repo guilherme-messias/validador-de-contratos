@@ -26,11 +26,10 @@
     <div id="contractTypeDiv" class="hidden">
       <label for="contractType">Tipo de contrato:</label>
       <select id="contractType">
+        <option value="permanent">Indeterminado</option>
         <option value="apprentice">Aprendiz</option>
         <option value="inter">Estagiário</option>
-        <option value="permanent">Indeterminado</option>
-        <option value="temporary">Determinado</option>
-        </select
+        <option value="temporary">Determinado</option></select
       ><br /><br />
     </div>
 
@@ -45,7 +44,6 @@
       <br /><br />
     </div>
 
-
     <!-- Selecionar nível de carreira -->
     <div id="careerLevelDiv" class="hidden">
       <label for="careerLevel">Nível de carreira:</label>
@@ -55,9 +53,7 @@
         <option value="specialist-II">Especialista II</option>
         <option value="coordinator">Coordenador</option>
         <option value="manager">Gerente</option>
-        <option value="techLead">Tech Lead</option>
-        <option value="director">Diretor</option>
-        </select
+        <option value="director">Diretor</option></select
       ><br /><br />
     </div>
 
@@ -67,8 +63,13 @@
       <select id="department">
         <option value="others">Outros</option>
         <option value="nextios">Nextios</option>
-        <option value="sales">Vendas</option>
-        <option value="preSales">Pré-vendas</option></select
+        <option value="inside-sales">Inside Sales</option>
+        <option value="canais">Canais</option>
+        <option value="gestao-de-relacionamento">Gestão de relacionamento</option>
+        <option value="upgrade">Upgrade</option>
+        <option value="cobranca">Cobrança</option>
+        <option value="vendas">Vendas</option>
+        <option value="pre-vendas">Pré-vendas</option></select
       ><br /><br />
     </div>
 
@@ -83,28 +84,24 @@
       <label for="trustedPosition">Cargo de confiança:</label>
       <select id="trustedPosition">
         <option value="yes">Sim</option>
-        <option value="no">Não</option>
-        </select
+        <option value="no">Não</option></select
       ><br /><br />
     </div>
 
-        <!-- Selecionar quantidade de horas mensais -->
-        <div id="monthlyHoursDiv" class="hidden">
-          <label for="monthlyHours">Horas mensais:</label>
-          <select id="monthlyHours">
-            <option value=200>200</option>
-            <option value=180>180</option>
-            <option value=150>150</option>
-            </select
-          ><br /><br />
-        </div>
-    
+    <!-- Selecionar quantidade de horas mensais -->
+    <div id="monthlyHoursDiv" class="hidden">
+      <label for="monthlyHours">Horas mensais:</label>
+      <select id="monthlyHours">
+        <option value="200">200</option>
+        <option value="180">180</option>
+        <option value="150">150</option></select
+      ><br /><br />
+    </div>
 
     <!-- Apresentar resultados dinamicamente -->
     <div id="buttonDiv" class="hidden">
       <button id="submit">Enviar</button>
     </div>
-
 
     <div id="result"></div>
   </body>

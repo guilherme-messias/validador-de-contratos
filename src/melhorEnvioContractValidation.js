@@ -1,18 +1,19 @@
-let contractCodes = "";
-
 export function melhorEnvioContractValidation() {
-  // function processUserInputForValidation() {
-  //  document.querySelector("#submit").addEventListener("click", () => {
-  //     const monthlyHours = document.querySelector("#monthlyHours").value;
-  //     const trustedPosition = document.querySelector("#trustedPosition").value;
+  document.getElementById("submit").addEventListener("click", () => {
+    const monthlyHours = document.getElementById("monthlyHours").value;
+    const trustedPosition = document.getElementById("trustedPosition").value;
+    const contractType = document.getElementById("contractType").value;
 
-  //     melhorEnvioContractFilters(monthlyHours, trustedPosition);
-  //     contractCodes = "" + "\n" + "emp - TERMOS COLABORADORES - MELHOR ENVIO (36715)" + "\n";
-  //   });
-  // }
+    const contractCodes = melhorEnvioContractFilters(
+      Number(monthlyHours),
+      trustedPosition,
+      contractType
+    );
+    console.log(contractCodes);
+  });
 
-  melhorEnvioContractFilters(180, "yes", "e");
   function melhorEnvioContractFilters(monthlyHours, trustedPosition, contractType) {
+    let contractCodes = "";
     if (contractType !== "apprentice" && contractType !== "inter") {
       // Validação contratos
       if (monthlyHours === 150) {
@@ -34,6 +35,6 @@ export function melhorEnvioContractValidation() {
       }
     }
     contractCodes += "emp - TERMOS COLABORADORES - MELHOR ENVIO (36715)" + "\n";
+    return contractCodes;
   }
-  return contractCodes;
 }

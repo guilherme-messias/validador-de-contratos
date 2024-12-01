@@ -1,24 +1,23 @@
-let contractCodes = "";
-
 export function lwsaContractValidation() {
-  // function processUserInputForValidation() {
-  //  document.querySelector("#submit").addEventListener("click", () => {
-  //     const workModality = document.querySelector("#workModality").value;
-  //     const careerLevel = document.querySelector("#careerLevel").value;
-  //     const department = document.querySelector("#department").value;
-  //      const contractType = document.querySelector("#contractType").value;
-  //        const position = document.querySelector("#position").value;
+  document.getElementById("submit").addEventListener("click", () => {
+    const workModality = document.getElementById("workModality").value;
+    const careerLevel = document.getElementById("careerLevel").value;
+    const department = document.getElementById("department").value;
+    const contractType = document.getElementById("contractType").value;
+    const position = document.getElementById("position").value;
 
-  //     lwsaContractFilters(workModality, careerLevel, department, contractType, position);
-  //     console.log(contractCodes);
-  //     contractCodes = "" + "\n" + "emp - TERMOS COLABORADORES - LWSA (36833)" + "\n";
-  //   });
-  // }
-
-  // EXEMPLO PROVISÓRIO PARA ACIONAR A LÓGICA DE VALIDAÇÃO
-  lwsaContractFilters("office", "director", "nextios", "permanent", "CONSULTOR DE RETENCAO");
+    const contractCodes = lwsaContractFilters(
+      workModality,
+      careerLevel,
+      department,
+      contractType,
+      position
+    );
+    console.log(contractCodes);
+  });
 
   function lwsaContractFilters(workModality, careerLevel, department, contractType, position) {
+    let contractCodes = "";
     // Formatar valor contendo a função para que seja possível comparar com o valor esperado
     function normalizePosition(position) {
       return position
@@ -34,7 +33,7 @@ export function lwsaContractValidation() {
         careerLevel !== "coordinator" &&
         contractType !== "temporary"
       ) {
-        contractCodes += "emp - CONTRATO DE TRABALHO HÍBRIDO lwsaSA - ATUALIZADO (36619)" + "\n";
+        contractCodes += "emp - CONTRATO DE TRABALHO HÍBRIDO lwsa - ATUALIZADO (36619)" + "\n";
       }
       if (
         contractType !== "temporary" &&
@@ -168,6 +167,6 @@ export function lwsaContractValidation() {
     }
 
     contractCodes += "emp - TERMOS COLABORADORES - LWSA (36833)" + "\n";
+    return contractCodes;
   }
-  return contractCodes;
 }

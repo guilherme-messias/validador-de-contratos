@@ -1,8 +1,15 @@
-let contractCodes = "";
-
 export function kinghostContractValidation() {
-  kinghostContractFilters("remote", "coordinator", "r");
+  document.getElementById("submit").addEventListener("click", () => {
+    const workModality = document.getElementById("workModality").value;
+    const contractType = document.getElementById("contractType").value;
+    const careerLevel = document.getElementById("careerLevel").value;
+
+    const contractCodes = kinghostContractFilters(workModality, careerLevel, contractType);
+    console.log(contractCodes);
+  });
+
   function kinghostContractFilters(workModality, careerLevel, contractType) {
+    let contractCodes = "";
     if (contractType !== "apprentice" && contractType !== "inter") {
       // Validação de contratos por modalidade de trabalho
       contractCodes += "emp - Contrato de Trabalho_Empresa 039 (36255)" + "\n";
@@ -55,7 +62,7 @@ export function kinghostContractValidation() {
       "\n" +
       "emp - 'TERMO DE CONFIDENCIALIDADE (30172)" +
       "\n";
-  }
 
-  return contractCodes;
+    return contractCodes;
+  }
 }

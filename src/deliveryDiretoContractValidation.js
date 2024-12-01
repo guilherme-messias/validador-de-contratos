@@ -1,8 +1,15 @@
-let contractCodes = "";
+export function deliveryDiretoContractValidation() {
+  document.getElementById("submit").addEventListener("click", () => {
+    const workModality = document.getElementById("workModality").value;
+    const contractType = document.getElementById("contractType").value;
 
-export function ddContractValidation() {
-  deliveryDiretoContractFilters("office", "i");
+    const contractCodes = deliveryDiretoContractFilters(workModality, contractType);
+    console.log(contractCodes);
+  });
+
   function deliveryDiretoContractFilters(workModality, contractType) {
+    let contractCodes = "";
+
     if (contractType !== "apprentice" && contractType !== "inter") {
       if (workModality === "hybrid") {
         contractCodes += "emp - CONTRATO HÍBRIDO DELIVERY DIRETO (36844)" + "\n";
@@ -14,6 +21,7 @@ export function ddContractValidation() {
         "emp - TERMO DE AUTORIZAÇÃO DE DESCONTO VALE REFEICAO - deliveryDireto (36847)" + "\n";
     }
     contractCodes += "emp - TERMOS COLABORADORES - deliveryDireto (36848)" + "\n";
+
+    return contractCodes;
   }
-  return contractCodes;
 }
