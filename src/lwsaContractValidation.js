@@ -1,6 +1,6 @@
 let contractCodes = "";
 
-function lwContractValidation() {
+function lwsaContractValidation() {
   // function processUserInputForValidation() {
   //  document.querySelector("#submit").addEventListener("click", () => {
   //     const workModality = document.querySelector("#workModality").value;
@@ -9,16 +9,16 @@ function lwContractValidation() {
   //      const contractType = document.querySelector("#contractType").value;
   //        const position = document.querySelector("#position").value;
 
-  //     lwContractFilters(workModality, careerLevel, department, contractType, position);
+  //     lwsaContractFilters(workModality, careerLevel, department, contractType, position);
   //     console.log(contractCodes);
   //     contractCodes = "" + "\n" + "emp - TERMOS COLABORADORES - LWSA (36833)" + "\n";
   //   });
   // }
 
   // EXEMPLO PROVISÓRIO PARA ACIONAR A LÓGICA DE VALIDAÇÃO
-  lwContractFilters("office", "director", "nextios", "permanent", "CONSULTOR DE RETENCAO");
+  lwsaContractFilters("office", "director", "nextios", "permanent", "CONSULTOR DE RETENCAO");
 
-  function lwContractFilters(workModality, careerLevel, department, contractType, position) {
+  function lwsaContractFilters(workModality, careerLevel, department, contractType, position) {
     // Formatar valor contendo a função para que seja possível comparar com o valor esperado
     function normalizePosition(position) {
       return position
@@ -28,13 +28,13 @@ function lwContractValidation() {
     }
 
     // Validação contratos
-    function lwContractFiltersHybrid(careerLevel, contractType) {
+    function lwsaContractFiltersHybrid(careerLevel, contractType) {
       if (
         careerLevel !== "specialist-II" &&
         careerLevel !== "coordinator" &&
         contractType !== "temporary"
       ) {
-        contractCodes += "emp - CONTRATO DE TRABALHO HÍBRIDO LWSA - ATUALIZADO (36619)" + "\n";
+        contractCodes += "emp - CONTRATO DE TRABALHO HÍBRIDO lwsaSA - ATUALIZADO (36619)" + "\n";
       }
       if (
         contractType !== "temporary" &&
@@ -49,7 +49,7 @@ function lwContractValidation() {
         contractType === "temporary"
       ) {
         contractCodes +=
-          "emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO LWSA - ATUALIZADO (36620)" + "\n";
+          "emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsaSA - ATUALIZADO (36620)" + "\n";
       }
       if (
         contractType === "temporary" &&
@@ -60,7 +60,7 @@ function lwContractValidation() {
       }
     }
 
-    function lwContractFiltersHomeOffice(careerLevel, contractType) {
+    function lwsaContractFiltersHomeOffice(careerLevel, contractType) {
       if (
         careerLevel !== "specialist-II" &&
         careerLevel !== "coordinator" &&
@@ -77,7 +77,7 @@ function lwContractValidation() {
       }
     }
 
-    function lwContractFiltersOffice(careerLevel, contractType) {
+    function lwsaContractFiltersOffice(careerLevel, contractType) {
       if (
         careerLevel !== "specialist-II" &&
         careerLevel !== "coordinator" &&
@@ -111,11 +111,11 @@ function lwContractValidation() {
     if (contractType !== "apprentice" && contractType !== "inter") {
       // Validação de contratos por modalidade de trabalho
       if (workModality === "hybrid") {
-        lwContractFiltersHybrid(careerLevel, contractType);
+        lwsaContractFiltersHybrid(careerLevel, contractType);
       }
 
       if (workModality === "homeOffice") {
-        lwContractFiltersHomeOffice(careerLevel, contractType);
+        lwsaContractFiltersHomeOffice(careerLevel, contractType);
       }
 
       if (workModality === "office") {
@@ -172,4 +172,4 @@ function lwContractValidation() {
   return contractCodes;
 }
 
-module.exports = lwContractValidation;
+module.exports = lwsaContractValidation;

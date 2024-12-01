@@ -18,10 +18,9 @@
       <option value="deliveryDireto">Delivery Direto</option>
       <option value="melhorEnvio">Melhor Envio</option>
       <option value="lwsa">LWSA</option>
-      <option value="allIn">All In</option>
-      <option value="nextios">Nextios</option>
-      <option value="octadesk">Octadesk</option></select
-    ><br /><br />
+      <option value="octadesk">Octadesk</option>
+    </select>
+    <br /><br />
 
     <!-- Selecionar tipo de contrato -->
     <div id="contractTypeDiv" class="hidden">
@@ -42,7 +41,8 @@
         <option value="hybrid">Híbrido</option>
         <option value="office">Presencial</option>
         <option value="homeOffice">Home Office</option>
-      ><br /><br />
+      </select>
+      <br /><br />
     </div>
 
 
@@ -76,15 +76,35 @@
     <div id="positionDiv" class="hidden">
       <label for="position">Cargo:</label>
       <input type="text" id="position" /><br /><br />
-      
     </div>
+
+    <!-- Selecionar se é ou não cargo de confiança -->
+    <div id="trustedPositionDiv" class="hidden">
+      <label for="trustedPosition">Cargo de confiança:</label>
+      <select id="trustedPosition">
+        <option value="yes">Sim</option>
+        <option value="no">Não</option>
+        </select
+      ><br /><br />
+    </div>
+
+        <!-- Selecionar quantidade de horas mensais -->
+        <div id="monthlyHoursDiv" class="hidden">
+          <label for="monthlyHours">Horas mensais:</label>
+          <select id="monthlyHours">
+            <option value=200>200</option>
+            <option value=180>180</option>
+            <option value=150>150</option>
+            </select
+          ><br /><br />
+        </div>
+    
 
     <!-- Apresentar resultados dinamicamente -->
     <div id="buttonDiv" class="hidden">
       <button id="submit">Enviar</button>
     </div>
 
-    <!-- TODO: Adicionar campo cargo lw, e se é ou não cargo de confiança me -->
 
     <div id="result"></div>
   </body>

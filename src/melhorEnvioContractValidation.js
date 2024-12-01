@@ -1,18 +1,18 @@
 let contractCodes = "";
 
-function meContractValidation() {
+function melhorEnvioContractValidation() {
   // function processUserInputForValidation() {
   //  document.querySelector("#submit").addEventListener("click", () => {
   //     const monthlyHours = document.querySelector("#monthlyHours").value;
   //     const trustedPosition = document.querySelector("#trustedPosition").value;
 
-  //     meContractFilters(monthlyHours, trustedPosition);
+  //     melhorEnvioContractFilters(monthlyHours, trustedPosition);
   //     contractCodes = "" + "\n" + "emp - TERMOS COLABORADORES - MELHOR ENVIO (36715)" + "\n";
   //   });
   // }
 
-  meContractFilters(180, "yes", "e");
-  function meContractFilters(monthlyHours, trustedPosition, contractType) {
+  melhorEnvioContractFilters(180, "yes", "e");
+  function melhorEnvioContractFilters(monthlyHours, trustedPosition, contractType) {
     if (contractType !== "apprentice" && contractType !== "inter") {
       // Validação contratos
       if (monthlyHours === 150) {
@@ -38,4 +38,4 @@ function meContractValidation() {
   return contractCodes;
 }
 
-module.exports = meContractValidation;
+module.exports = melhorEnvioContractValidation;
