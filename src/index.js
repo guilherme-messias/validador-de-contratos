@@ -34,6 +34,8 @@ units.addEventListener("change", function () {
     departmentDiv.classList.remove("hidden");
     workModalityDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
+
+    octadeskContractValidation();
   }
 
   if (units.value === "cplug") {
@@ -41,12 +43,16 @@ units.addEventListener("change", function () {
     careerLevelDiv.classList.remove("hidden");
     departmentDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
+
+    cplugContractValidation();
   }
 
   if (units.value === "deliveryDireto") {
     workModalityDiv.classList.remove("hidden");
     contractTypeDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
+
+    deliveryDiretoContractValidation();
   }
 
   if (units.value === "kinghost") {
@@ -54,6 +60,8 @@ units.addEventListener("change", function () {
     careerLevelDiv.classList.remove("hidden");
     contractTypeDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
+
+    kinghostContractValidation();
   }
 
   if (units.value === "lwsa") {
@@ -63,6 +71,8 @@ units.addEventListener("change", function () {
     contractTypeDiv.classList.remove("hidden");
     positionDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
+
+    lwsaContractValidation();
   }
 
   if (units.value === "melhorEnvio") {
@@ -70,27 +80,7 @@ units.addEventListener("change", function () {
     contractTypeDiv.classList.remove("hidden");
     trustedPositionDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
-  }
-});
 
-// De acordo com a unidade selecionada, o sistema deve acionar a função de validação da unidade.
-units.addEventListener("change", () => {
-  if (units.value === "octadesk") {
-    octadeskContractValidation();
-  }
-  if (units.value === "cplug") {
-    cplugContractValidation();
-  }
-  if (units.value === "deliveryDireto") {
-    deliveryDiretoContractValidation();
-  }
-  if (units.value === "kinghost") {
-    kinghostContractValidation();
-  }
-  if (units.value === "lwsa") {
-    lwsaContractValidation();
-  }
-  if (units.value === "melhorEnvio") {
     melhorEnvioContractValidation();
   }
 });
