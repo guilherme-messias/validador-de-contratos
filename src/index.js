@@ -35,7 +35,7 @@ units.addEventListener("change", function () {
     workModalityDiv.classList.remove("hidden");
     buttonDiv.classList.remove("hidden");
   }
-  
+
   if (units.value === "cplug") {
     contractTypeDiv.classList.remove("hidden");
     careerLevelDiv.classList.remove("hidden");
@@ -73,9 +73,24 @@ units.addEventListener("change", function () {
   }
 });
 
-// console.log(cplugContractValidation());
-// console.log(deliveryDiretoContractValidation());
-// console.log(kinghostContractValidation());
-// console.log(lwsaContractValidation());
-// console.log(melhorEnvioContractValidation());
-// console.log(octadeskContractValidation());
+// De acordo com a unidade selecionada, o sistema deve acionar a função de validação da unidade.
+units.addEventListener("change", () => {
+  if (units.value === "octadesk") {
+    octadeskContractValidation();
+  }
+  if (units.value === "cplug") {
+    cplugContractValidation();
+  }
+  if (units.value === "deliveryDireto") {
+    deliveryDiretoContractValidation();
+  }
+  if (units.value === "kinghost") {
+    kinghostContractValidation();
+  }
+  if (units.value === "lwsa") {
+    lwsaContractValidation();
+  }
+  if (units.value === "melhorEnvio") {
+    melhorEnvioContractValidation();
+  }
+});
