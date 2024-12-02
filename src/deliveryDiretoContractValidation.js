@@ -4,7 +4,7 @@ export function deliveryDiretoContractValidation() {
     const contractType = document.getElementById("contractType").value;
 
     const contractCodes = deliveryDiretoContractFilters(workModality, contractType);
-    console.log(contractCodes);
+    document.getElementById("result").innerText = contractCodes;
   });
 
   function deliveryDiretoContractFilters(workModality, contractType) {

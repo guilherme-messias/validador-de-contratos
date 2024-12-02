@@ -9,7 +9,7 @@ export function melhorEnvioContractValidation() {
       trustedPosition,
       contractType
     );
-    console.log(contractCodes);
+    document.getElementById("result").innerText = contractCodes;
   });
 
   function melhorEnvioContractFilters(monthlyHours, trustedPosition, contractType) {

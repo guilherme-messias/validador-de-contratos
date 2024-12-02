@@ -5,7 +5,7 @@ export function cplugContractValidation() {
     const contractType = document.getElementById("contractType").value;
 
     const contractCodes = cplugContractFilters(contractType, careerLevel, department);
-    console.log(contractCodes);
+    document.getElementById("result").innerText = contractCodes;
   });
 }
 

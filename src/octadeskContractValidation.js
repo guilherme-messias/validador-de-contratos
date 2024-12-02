@@ -11,7 +11,7 @@ export function octadeskContractValidation() {
       department,
       contractType
     );
-    console.log(contractCodes);
+    document.getElementById("result").innerText = contractCodes;
   });
 
   function octadeskContractFilters(workModality, careerLevel, department, contractType) {

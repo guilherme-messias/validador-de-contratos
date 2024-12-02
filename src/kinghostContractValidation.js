@@ -5,7 +5,7 @@ export function kinghostContractValidation() {
     const careerLevel = document.getElementById("careerLevel").value;
 
     const contractCodes = kinghostContractFilters(workModality, careerLevel, contractType);
-    console.log(contractCodes);
+    document.getElementById("result").innerText = contractCodes;
   });
 
   function kinghostContractFilters(workModality, careerLevel, contractType) {

@@ -36,6 +36,7 @@ units.addEventListener("change", function () {
     buttonDiv.classList.remove("hidden");
 
     octadeskContractValidation();
+
   }
 
   if (units.value === "cplug") {

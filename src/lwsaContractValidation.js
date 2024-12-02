@@ -13,7 +13,7 @@ export function lwsaContractValidation() {
       contractType,
       position
     );
-    console.log(contractCodes);
+    document.getElementById("result").innerText = contractCodes;
   });
 
   function lwsaContractFilters(workModality, careerLevel, department, contractType, position) {
