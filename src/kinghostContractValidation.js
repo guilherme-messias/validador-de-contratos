@@ -11,9 +11,10 @@ export function kinghostContractValidation() {
   function kinghostContractFilters(workModality, careerLevel, contractType) {
     let contractCodes = "";
     if (contractType !== "apprentice" && contractType !== "inter") {
-      // Validação de contratos por modalidade de trabalho
       contractCodes += "emp - Contrato de Trabalho_Empresa 039 (36255)" + "\n";
+    }
 
+    if (contractType !== "inter") {
       if (workModality === "hybrid") {
         contractCodes += "gru - *TERMO DE TRABALHO HIBRIDO (30822)" + "\n";
       } else if (workModality === "homeOffice") {
@@ -21,9 +22,7 @@ export function kinghostContractValidation() {
       } else {
         contractCodes += "gru - *TERMO DE TELETRABALHO INTEGRAL (36910)" + "\n";
       }
-    }
 
-    if (contractType !== "inter") {
       contractCodes += "sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)" + "\n";
 
       if (
