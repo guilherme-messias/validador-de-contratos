@@ -3,8 +3,8 @@
     "target": "esnext",
     "module": "ESNext",
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./clients"
   },
-  "include": ["src/**/*"],
+  "include": ["clients/**/*.ts"],
   "exclude": ["node_modules"]
 }
