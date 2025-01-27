@@ -16,6 +16,17 @@
       </nav>
     </header>
     <main>
+      <div id="contractTypeDiv" class="form-group hidden">
+        <label for="contractType">Tipo de contrato:</label>
+        <select id="contractType" class="form-control">
+          <option value="permanent">Indeterminado</option>
+          <option value="apprentice">Aprendiz</option>
+          <option value="inter">Estagiário</option>
+          <option value="temporary">Determinado</option>
+        </select>
+      </div>
+
+
       <form action="#" method="post">
         <div id="workModalityDiv" class="form-group hidden">
           <label for="workModality">Modalidade de trabalho:</label>
@@ -37,31 +48,11 @@
             <option value="director">Diretor</option>
           </select>
         </div>
-
-        <div id="departmentDiv" class="form-group hidden">
-          <label for="department">Departamento:</label>
-          <select id="department" class="form-control">
-            <option value="others">Outros</option>
-            <option value="nextios">Nextios</option>
-            <option value="inside-sales">Inside Sales</option>
-            <option value="canais">Canais</option>
-            <option value="gestao-de-relacionamento">Gestão de relacionamento</option>
-            <option value="upgrade">Upgrade</option>
-            <option value="cobranca">Cobrança</option>
-            <option value="vendas">Vendas</option>
-            <option value="pre-vendas">Pré-vendas</option>
-          </select>
-        </div>
-
-        <div id="contractTypeDiv" class="form-group hidden">
-          <label for="contractType">Tipo de contrato:</label>
-          <select id="contractType" class="form-control">
-            <option value="permanent">Indeterminado</option>
-            <option value="apprentice">Aprendiz</option>
-            <option value="inter">Estagiário</option>
-            <option value="temporary">Determinado</option>
-          </select>
-        </div>
+<!-- TODO: Implementar a lógica para exibir o campo de cargo advogado -->
+        <!-- <div id="positionDiv" class="form-group hidden">
+          <label for="position">Cargo:</label>
+          <input type="text" id="position" class="form-control" />
+        </div> --> 
 
         <div id="positionDiv" class="form-group hidden">
           <label for="position">Cargo:</label>
