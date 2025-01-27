@@ -5,7 +5,8 @@ companyForm.addEventListener("submit", (event) => {
     const company = Object.fromEntries(formData.entries());
     switch (company["company"]) {
         case "company-1":
-            console.log("Empresa 1");
+            window.location.href = '../company-1/index.html';
+            // TODO: entender pq não está direcionando para a página
             break;
         case "company-2":
             console.log("Empresa 2");
