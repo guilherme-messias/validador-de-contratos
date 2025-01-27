@@ -5,6 +5,4 @@ companyForm.addEventListener('submit', (event) => {
   const formData = new FormData(companyForm);
   const company = Object.fromEntries(formData.entries());
   console.log(company);
-
-  // TODO: entender porque não aparece nome da empresa no console
 });
