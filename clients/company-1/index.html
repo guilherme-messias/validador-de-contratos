@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
     <title>LWSA</title>
   </head>
   <body>
@@ -14,7 +15,64 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <form action="#" method="post">
+        <div id="workModalityDiv" class="form-group hidden">
+          <label for="workModality">Modalidade de trabalho:</label>
+          <select id="workModality" class="form-control">
+            <option value="hybrid">Híbrido</option>
+            <option value="office">Presencial</option>
+            <option value="homeOffice">Home Office</option>
+          </select>
+        </div>
+
+        <div id="careerLevelDiv" class="form-group hidden">
+          <label for="careerLevel">Nível de carreira:</label>
+          <select id="careerLevel" class="form-control">
+            <option value="others">Outros</option>
+            <option value="specialist-I">Especialista I</option>
+            <option value="specialist-II">Especialista II</option>
+            <option value="coordinator">Coordenador</option>
+            <option value="manager">Gerente</option>
+            <option value="director">Diretor</option>
+          </select>
+        </div>
+
+        <div id="departmentDiv" class="form-group hidden">
+          <label for="department">Departamento:</label>
+          <select id="department" class="form-control">
+            <option value="others">Outros</option>
+            <option value="nextios">Nextios</option>
+            <option value="inside-sales">Inside Sales</option>
+            <option value="canais">Canais</option>
+            <option value="gestao-de-relacionamento">Gestão de relacionamento</option>
+            <option value="upgrade">Upgrade</option>
+            <option value="cobranca">Cobrança</option>
+            <option value="vendas">Vendas</option>
+            <option value="pre-vendas">Pré-vendas</option>
+          </select>
+        </div>
+
+        <div id="contractTypeDiv" class="form-group hidden">
+          <label for="contractType">Tipo de contrato:</label>
+          <select id="contractType" class="form-control">
+            <option value="permanent">Indeterminado</option>
+            <option value="apprentice">Aprendiz</option>
+            <option value="inter">Estagiário</option>
+            <option value="temporary">Determinado</option>
+          </select>
+        </div>
+
+        <div id="positionDiv" class="form-group hidden">
+          <label for="position">Cargo:</label>
+          <input type="text" id="position" class="form-control" />
+        </div>
+
+        <button></button>
+      </form>
+
+
+    </main>
     <footer>
       <p>© 2025 - Todos os direitos reservados</p>
     </footer>
