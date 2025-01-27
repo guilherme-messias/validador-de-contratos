@@ -8,25 +8,25 @@ companyForm.addEventListener("submit", (event) => {
             window.location.href = '../clients/company-1/index.html';
             break;
         case "company-2":
-            console.log("Empresa 2");
+            window.location.href = '../clients/company-2/index.html';
             break;
         case "company-3":
-            console.log("Empresa 3");
+            window.location.href = '../clients/company-3/index.html';
             break;
         case "company-4":
-            console.log("Empresa 4");
+            window.location.href = '../clients/company-4/index.html';
             break;
         case "company-5":
-            console.log("Empresa 5");
+            window.location.href = '../clients/company-5/index.html';
             break;
         case "company-6":
-            console.log("Empresa 6");
+            window.location.href = '../clients/company-6/index.html';
             break;
         case "company-7":
-            console.log("Empresa 7");
+            window.location.href = '../clients/company-7/index.html';
             break;
         case "company-8":
-            console.log("Empresa 8");
+            window.location.href = '../clients/company-8/index.html';
             break;
         default:
             console.log("Empresa não encontrada");
