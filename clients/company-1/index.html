@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>LWSA</title>
   </head>
   <body>
@@ -18,42 +19,38 @@
     <main>
       <div>
         <label>Tipo de contrato:</label>
-        <select id="contractType">
-          <option value="permanent">Indeterminado</option>
-          <option value="apprentice">Aprendiz</option>
-          <option value="inter">Estagiário</option>
-          <option value="temporary">Determinado</option>
+        <select id="contract-type">
+          <option value="contract-permanent">Indeterminado</option>
+          <option value="contract-apprentice">Aprendiz</option>
+          <option value="contract-inter">Estagiário</option>
+          <option value="contract-temporary">Determinado</option>
         </select>
       </div>
-
 
       <form action="#" method="post">
         <div>
           <label>Modalidade de trabalho:</label>
-          <select id="workModality">
-            <option value="hybrid">Híbrido</option>
-            <option value="office">Presencial</option>
-            <option value="homeOffice">Home Office</option>
+          <select id="work-modality">
+            <option value="modality-hybrid">Híbrido</option>
+            <option value="modality-office">Presencial</option>
+            <option value="modality-home-office">Home Office</option>
           </select>
         </div>
 
         <div>
           <label>Nível de carreira:</label>
-          <select id="careerLevel">
-            <option value="others">Outros</option>
-            <option value="specialist-II">Especialista II</option>
-            <option value="coordinator">Coordenador</option>
-            <option value="manager">Gerente</option>
-            <option value="director">Diretor CLT</option>
-            <option value="director">Diretor sem FGTS</option>
+          <select id="career-level">
+            <option value="career-level-others">Outros</option>
+            <option value="career-level-specialist-II">Especialista II</option>
+            <option value="career-level-coordinator">Coordenador</option>
+            <option value="career-level-manager">Gerente</option>
+            <option value="career-level-director-CLT">Diretor CLT</option>
+            <option value="career-level-director">Diretor sem FGTS</option>
           </select>
         </div>
-<!-- TODO: Implementar a lógica para exibir o campo de cargo advogado -->
- <!-- TODO: Renomear nome dos campos para que todos sigam um padrão mais elegível -->
-        <!-- <div>
-          <label>Cargo:</label>
-          <input type="text" id="position" />
-        </div> --> 
+        <!-- TODO: Implementar a lógica para exibir o campo de cargo advogado -->
+        <!-- TODO: Renomear nome dos campos para que todos sigam um padrão mais elegível -->
+        <!-- <div>-->
 
         <div>
           <label>Cargo:</label>
@@ -62,8 +59,6 @@
 
         <button></button>
       </form>
-
-
     </main>
     <footer>
       <p>© 2025 - Todos os direitos reservados</p>
