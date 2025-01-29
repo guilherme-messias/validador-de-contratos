@@ -7,3 +7,7 @@ const workModality = (document.getElementById('work-modality') as HTMLSelectElem
 const careerLevel = (document.getElementById('career-level') as HTMLSelectElement).value;
 const isAdvocate = (document.querySelector('input[name="flag"]:checked') as HTMLSelectElement).value;
 const position = (document.getElementById('position') as HTMLSelectElement).value;
+
+document.getElementById("contract-details-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
