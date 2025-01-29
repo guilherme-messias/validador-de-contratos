@@ -17,20 +17,20 @@
       </nav>
     </header>
     <main>
-      <div>
-        <label>Tipo de contrato:</label>
-        <select id="contract-type">
-          <option value="contract-permanent">Indeterminado</option>
-          <option value="contract-apprentice">Aprendiz</option>
-          <option value="contract-inter">Estagiário</option>
-          <option value="contract-temporary">Determinado</option>
-        </select>
-      </div>
-
       <form action="#" method="post">
         <div>
+          <label>Tipo de contrato:</label>
+          <select id="contract-type" required>
+            <option value="contract-permanent">Indeterminado</option>
+            <option value="contract-apprentice">Aprendiz</option>
+            <option value="contract-inter">Estagiário</option>
+            <option value="contract-temporary">Determinado</option>
+          </select>
+        </div>
+
+        <div>
           <label>Modalidade de trabalho:</label>
-          <select id="work-modality">
+          <select id="work-modality" required>
             <option value="modality-hybrid">Híbrido</option>
             <option value="modality-office">Presencial</option>
             <option value="modality-home-office">Home Office</option>
@@ -39,7 +39,7 @@
 
         <div>
           <label>Nível de carreira:</label>
-          <select id="career-level">
+          <select id="career-level" required>
             <option value="career-level-others">Outros</option>
             <option value="career-level-specialist-II">Especialista II</option>
             <option value="career-level-coordinator">Coordenador</option>
@@ -48,9 +48,14 @@
             <option value="career-level-director">Diretor sem FGTS</option>
           </select>
         </div>
-        <!-- TODO: Implementar a lógica para exibir o campo de cargo advogado -->
-        <!-- TODO: Renomear nome dos campos para que todos sigam um padrão mais elegível -->
-        <!-- <div>-->
+
+        <div>
+          <label>Advogado?</label>
+          <input type="radio" id="advocate-yes" name="flag" />
+          <label for="advocate-yes">Sim</label>
+          <input type="radio" id="advocate-no" name="flag" />
+          <label for="advocate-no">Não</label>
+        </div>
 
         <div>
           <label>Cargo:</label>
