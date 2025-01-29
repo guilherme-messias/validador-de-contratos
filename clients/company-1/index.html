@@ -20,50 +20,63 @@
       <form action="#" method="post">
         <div>
           <label>Tipo de contrato:</label>
-          <select id="contract-type" required>
-            <option value="contract-permanent">Indeterminado</option>
-            <option value="contract-apprentice">Aprendiz</option>
-            <option value="contract-inter">Estagiário</option>
-            <option value="contract-temporary">Determinado</option>
+          <select id="contract-type" name="contract-type" required>
+            <option value="contract-permanent" name="contract-permanent">Indeterminado</option>
+            <option value="contract-apprentice" name="contract-apprentice">Aprendiz</option>
+            <option value="contract-inter" name="contract-inter">Estagiário</option>
+            <option value="contract-temporary" name="contract-temporary">Determinado</option>
           </select>
         </div>
 
         <div>
           <label>Modalidade de trabalho:</label>
-          <select id="work-modality" required>
-            <option value="modality-hybrid">Híbrido</option>
-            <option value="modality-office">Presencial</option>
-            <option value="modality-home-office">Home Office</option>
+          <select id="work-modality" name="work-modality" required>
+            <option value="modality-hybrid" name="modality-hybrid">Híbrido</option>
+            <option value="modality-office" name="modality-office">Presencial</option>
+            <option value="modality-home-office" name="modality-home-office">Home Office</option>
           </select>
         </div>
 
         <div>
           <label>Nível de carreira:</label>
-          <select id="career-level" required>
-            <option value="career-level-others">Outros</option>
-            <option value="career-level-specialist-II">Especialista II</option>
-            <option value="career-level-coordinator">Coordenador</option>
-            <option value="career-level-manager">Gerente</option>
-            <option value="career-level-director-CLT">Diretor CLT</option>
-            <option value="career-level-director">Diretor sem FGTS</option>
+          <select id="career-level" name="career-level" required>
+            <option value="career-level-others" name="career-level-others">Outros</option>
+            <option value="career-level-specialist-II" name="career-level-specialist-II">
+              Especialista II
+            </option>
+            <option value="career-level-coordinator" name="career-level-coordinator">
+              Coordenador
+            </option>
+            <option value="career-level-manager" name="career-level-manager">Gerente</option>
+            <option value="career-level-director-CLT" name="career-level-director-CLT">
+              Diretor CLT
+            </option>
+            <option value="career-level-director" name="career-level-director">
+              Diretor sem FGTS
+            </option>
           </select>
         </div>
 
         <div>
           <label>Advogado?</label>
-          <input type="radio" id="advocate-yes" name="flag" />
+          <input type="radio" id="advocate-yes" name="flag" value="advocate-yes" />
           <label for="advocate-yes">Sim</label>
-          <input type="radio" id="advocate-no" name="flag" />
+          <input type="radio" id="advocate-no" name="flag" value="advocate-no" />
           <label for="advocate-no">Não</label>
         </div>
 
         <div>
           <label>Cargo:</label>
-          <input type="text" id="position" />
+          <input type="text" id="position" name="position" />
         </div>
 
-        <button></button>
+        <button>Enviar</button>
       </form>
+
+      <div id="result"></div>
+
+      <!-- Ocultar botão com js -->
+      <input type="button" value="Realizar nova consulta" id="btn-new-query" />
     </main>
     <footer>
       <p>© 2025 - Todos os direitos reservados</p>
