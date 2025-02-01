@@ -1,8 +1,6 @@
 const btnNewQuery = document.getElementById("btn-new-query") as HTMLButtonElement;
 btnNewQuery.classList.add("hidden");
 
-let result = "";
-
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -13,3 +11,24 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     .value;
   const position = (document.getElementById("position") as HTMLSelectElement).value;
 });
+
+function contractFilters(
+  contractType: string,
+  workModality: string,
+  careerLevel: string,
+  position: string
+): string {
+  let result = "";
+
+  function normalizePosition(position: string): string {
+    return position
+      .toUpperCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "-");
+  }
+
+  
+
+
+  return result;
+}
