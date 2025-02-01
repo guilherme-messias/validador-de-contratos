@@ -1,6 +1,7 @@
 import contractModalityHomeOffice from "./filters/contractModalityHomeOffice.js";
 import contractModalityHybrid from "./filters/contractModalityHybrid.js";
 import contractModalityOffice from "./filters/contractModalityOffice.js";
+import termOfWork from "./filters/termOfWork";
 
 const btnNewQuery = document.getElementById("btn-new-query") as HTMLButtonElement;
 btnNewQuery.classList.add("hidden");
@@ -50,6 +51,10 @@ function contractFilters(
         `;
     }
   }
+
+  result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+  
+  `;
 
   return result;
 }

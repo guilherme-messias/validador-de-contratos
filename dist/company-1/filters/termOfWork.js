@@ -32,5 +32,8 @@ export default function termOfWork(contractType, careerLevel, position) {
 
       `;
     }
+    result += `emp - TERMOS COLABORADORES - LWSA (36833)
+  
+  `;
     return result;
 }

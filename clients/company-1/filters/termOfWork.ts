@@ -43,5 +43,9 @@ export default function termOfWork(
       `;
   }
 
+  result += `emp - TERMOS COLABORADORES - LWSA (36833)
+  
+  `;
+
   return result;
 }

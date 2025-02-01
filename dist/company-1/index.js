@@ -1,6 +1,7 @@
 import contractModalityHomeOffice from "./filters/contractModalityHomeOffice.js";
 import contractModalityHybrid from "./filters/contractModalityHybrid.js";
 import contractModalityOffice from "./filters/contractModalityOffice.js";
+import termOfWork from "./filters/termOfWork";
 const btnNewQuery = document.getElementById("btn-new-query");
 btnNewQuery.classList.add("hidden");
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
@@ -37,5 +38,8 @@ function contractFilters(contractType, workModality, careerLevel, position) {
         `;
         }
     }
+    result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+  
+  `;
     return result;
 }
