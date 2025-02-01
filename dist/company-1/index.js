@@ -26,22 +26,18 @@ function contractFilters(contractType, workModality, careerLevel, position) {
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
         if (workModality === "modality-office") {
             result += `${contractModalityOffice(careerLevel, contractType)}
-    
   `;
         }
         if (workModality === "modality-home-office") {
-            result += `${contractModalityHomeOffice(careerLevel, contractType)}
-      
+            result += `${contractModalityHomeOffice(careerLevel, contractType)}    
       `;
         }
         if (workModality === "modality-hybrid") {
             result += `${contractModalityHybrid(careerLevel, contractType)}
-        
         `;
         }
     }
     result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
-  
   `;
     return result;
 }

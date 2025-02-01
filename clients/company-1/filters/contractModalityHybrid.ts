@@ -6,16 +6,14 @@ export default function contractModalityHybrid(careerLevel: string, contractType
     careerLevel !== "career-level-coordinator" &&
     contractType !== "contract-temporary"
   ) {
-    result += `emp - CONTRATO DE TRABALHO HÍBRIDO lwsa - ATUALIZADO (36619)
-    
+    result += `emp - CONTRATO DE TRABALHO HÍBRIDO lwsa - ATUALIZADO (36619)  
     `;
   }
   if (
     (careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
     contractType !== "contract-temporary"
   ) {
-    result += `emp - CONTRATO DE TRABALHO HÍBRIDO CARGO DE CONFIANÇA 60.40 LOCAWEB (36549)
-      
+    result += `emp - CONTRATO DE TRABALHO HÍBRIDO CARGO DE CONFIANÇA 60.40 LOCAWEB (36549)     
       `;
   }
 
@@ -24,8 +22,7 @@ export default function contractModalityHybrid(careerLevel: string, contractType
     careerLevel !== "career-level-coordinator" &&
     contractType === "contract-temporary"
   ) {
-    result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsaSA - ATUALIZADO (36620)
-      
+    result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsaSA - ATUALIZADO (36620)      
       `;
   }
 
@@ -34,7 +31,6 @@ export default function contractModalityHybrid(careerLevel: string, contractType
     contractType === "contract-temporary"
   ) {
     result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO 60.40 - ATUALIZADO (36621)
-      
       `;
   }
 
