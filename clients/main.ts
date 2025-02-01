@@ -30,6 +30,6 @@ companyForm.addEventListener("submit", (event) => {
       window.location.href = '../clients/company-8/index.html';
       break;
     default:
-      console.log("Empresa não encontrada");
+      alert("Empresa não encontrada");
   }
 });
