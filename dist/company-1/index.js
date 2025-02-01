@@ -12,6 +12,8 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const isAdvocate = document.querySelector('input[name="flag"]:checked')
         .value;
     const position = document.getElementById("position").value;
+    const result = contractFilters(contractType, workModality, careerLevel, position);
+    console.log(result);
 });
 function contractFilters(contractType, workModality, careerLevel, position) {
     let result = "";
