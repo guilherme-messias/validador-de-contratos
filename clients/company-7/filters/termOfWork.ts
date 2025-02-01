@@ -37,6 +37,16 @@ export default function termOfWork(
       `;
   }
 
+  if (position.includes("COMERCIAL") || position.includes("VENDAS")) {
+    result += `ADITIVO COMERCIAL NEXTIOS + POLÍTICA COMERCIAL NEXTIOS - 36760
+      `;
+  }
+
+  if (position.includes("PRE VENDAS")) {
+    result += `ADITIVO LOCAWEB RV TSP + POLÍTICA TSP - 36759
+      `;
+  }
+
   result += `emp - TERMOS COLABORADORES - LWSA (36833)
   `;
 
