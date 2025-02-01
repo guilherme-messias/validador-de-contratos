@@ -1,4 +1,4 @@
-export default function contractModalityOffice (careerLevel:string, contractType: string): string {
+export default function contractModalityOffice(careerLevel: string, contractType: string): string {
   let result = "";
   if (
     careerLevel !== "career-level-specialist-II" &&
@@ -32,7 +32,6 @@ export default function contractModalityOffice (careerLevel:string, contractType
     result += `emp - **CONTRATO DE TRABALHO - DETERMINADO CARGO CONFIANÇA 60/40 (30510)      
       `;
   }
-
 
   return result;
 }

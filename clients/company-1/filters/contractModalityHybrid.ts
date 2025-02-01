@@ -22,7 +22,7 @@ export default function contractModalityHybrid(careerLevel: string, contractType
     careerLevel !== "career-level-coordinator" &&
     contractType === "contract-temporary"
   ) {
-    result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsaSA - ATUALIZADO (36620)      
+    result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsa - ATUALIZADO (36620)      
       `;
   }
 

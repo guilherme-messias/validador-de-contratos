@@ -14,7 +14,7 @@ export default function contractModalityHybrid(careerLevel, contractType) {
     if (careerLevel !== "career-level-specialist-II" &&
         careerLevel !== "career-level-coordinator" &&
         contractType === "contract-temporary") {
-        result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsaSA - ATUALIZADO (36620)      
+        result += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO lwsa - ATUALIZADO (36620)      
       `;
     }
     if ((careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
