@@ -1,3 +1,6 @@
+import contractModalityHomeOffice from "./filters/contractModalityHomeOffice.js";
+import contractModalityHybrid from "./filters/contractModalityHybrid.js";
+import contractModalityOffice from "./filters/contractModalityOffice.js";
 const btnNewQuery = document.getElementById("btn-new-query");
 btnNewQuery.classList.add("hidden");
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
@@ -16,6 +19,23 @@ function contractFilters(contractType, workModality, careerLevel, position) {
             .toUpperCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "-");
+    }
+    if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
+        if (workModality === "modality-office") {
+            result += `${contractModalityOffice(careerLevel, contractType)}
+    
+  `;
+        }
+        if (workModality === "modality-home-office") {
+            result += `${contractModalityHomeOffice(careerLevel, contractType)}
+      
+      `;
+        }
+        if (workModality === "modality-hybrid") {
+            result += `${contractModalityHybrid(careerLevel, contractType)}
+        
+        `;
+        }
     }
     return result;
 }
