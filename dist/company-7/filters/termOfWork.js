@@ -17,19 +17,21 @@ export default function termOfWork(contractType, careerLevel, position) {
       `;
     }
     if (position.includes("COORDENADOR DE VENDAS ONLINE II")) {
-        result += `ADITIVO AO CONTRATO DE TRABALHO_Coordenadores Inside Sales - 36757" + "\n
+        result += `ADITIVO AO CONTRATO DE TRABALHO_Coordenadores Inside Sales - 36757
       `;
     }
     if (position.includes("CONSULTOR DE RETENCAO") ||
         position.includes("EXECUTIVO DE RETENCAO") ||
         position.includes("COORDENADOR DE RETENCAO")) {
-        result += `ADITIVO NOVOS CONTRATADOS - COSTUMER CARE  2023 + POLÍTICA - 36758" + "\n
+        result += `ADITIVO NOVOS CONTRATADOS - COSTUMER CARE  2023 + POLÍTICA - 36758
       `;
     }
-    if (position.includes("CONSULTOR DE RETENCAO") ||
-        position.includes("EXECUTIVO DE RETENCAO") ||
-        position.includes("COORDENADOR DE RETENCAO")) {
-        result += `ADITIVO NOVOS CONTRATADOS - COSTUMER CARE  2023 + POLÍTICA - 36758" + "\n
+    if (position.includes("COMERCIAL") || position.includes("VENDAS")) {
+        result += `ADITIVO COMERCIAL NEXTIOS + POLÍTICA COMERCIAL NEXTIOS - 36760
+      `;
+    }
+    if (position.includes("PRE VENDAS")) {
+        result += `ADITIVO LOCAWEB RV TSP + POLÍTICA TSP - 36759
       `;
     }
     result += `emp - TERMOS COLABORADORES - LWSA (36833)
