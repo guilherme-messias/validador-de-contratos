@@ -1,7 +1,7 @@
 import contractModalityHomeOffice from "./filters/contractModalityHomeOffice.js";
 import contractModalityHybrid from "./filters/contractModalityHybrid.js";
 import contractModalityOffice from "./filters/contractModalityOffice.js";
-import termOfWork from "./filters/termOfWork";
+import termOfWork from "./filters/termOfWork.js";
 
 const btnNewQuery = document.getElementById("btn-new-query") as HTMLButtonElement;
 btnNewQuery.classList.add("hidden");
