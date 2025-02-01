@@ -1,4 +1,4 @@
-export default function contractHybrid(careerLevel: string, contractType: string): string {
+export default function contractModalityHybrid(careerLevel: string, contractType: string): string {
   let result = "";
 
   if (

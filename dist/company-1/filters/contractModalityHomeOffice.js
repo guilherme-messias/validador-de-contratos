@@ -1,4 +1,4 @@
-export default function contractHomeOffice(careerLevel, contractType) {
+export default function contractModalityHomeOffice(careerLevel, contractType) {
     let result = "";
     if (careerLevel !== "career-level-specialist-II" &&
         careerLevel !== "career-level-coordinator" &&

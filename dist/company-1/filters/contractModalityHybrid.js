@@ -1,4 +1,4 @@
-export default function contractHybrid(careerLevel, contractType) {
+export default function contractModalityHybrid(careerLevel, contractType) {
     let result = "";
     if (careerLevel !== "career-level-specialist-II" &&
         careerLevel !== "career-level-coordinator" &&

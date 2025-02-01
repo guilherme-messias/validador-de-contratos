@@ -1,4 +1,4 @@
-export default function contractHomeOffice(careerLevel: string, contractType: string): string {
+export default function contractModalityHomeOffice(careerLevel: string, contractType: string): string {
   let result = "";
 
   if (
