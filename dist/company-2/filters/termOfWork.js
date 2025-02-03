@@ -1,6 +1,8 @@
 export default function termOfWork(contractType, careerLevel, department, position) {
     let result = "";
-    if (contractType !== "contract-apprentice" && contractType !== "contract-inter" && department !== "department-others") {
+    if (contractType !== "contract-apprentice" &&
+        contractType !== "contract-inter" &&
+        department !== "department-others") {
         result += `TERMO ADITIVO AO CONTRATO DE TRABALHO - CONNECTPLUG - 36544
      `;
     }

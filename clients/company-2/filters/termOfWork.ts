@@ -5,7 +5,11 @@ export default function termOfWork(
   position: string
 ): string {
   let result = "";
-  if (contractType !== "contract-apprentice" && contractType !== "contract-inter" && department !== "department-others") {
+  if (
+    contractType !== "contract-apprentice" &&
+    contractType !== "contract-inter" &&
+    department !== "department-others"
+  ) {
     result += `TERMO ADITIVO AO CONTRATO DE TRABALHO - CONNECTPLUG - 36544
      `;
   }
@@ -14,8 +18,6 @@ export default function termOfWork(
     result += `emp - TERMOS GESTORES - CPLUG (36697) - COORDENACAO E GERENCIA
     `;
   }
-
- 
 
   result += `emp - TERMOS COLABORADORES - CPLUG (36667)
   `;
