@@ -9,13 +9,14 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const contractType = document.getElementById("contract-type").value;
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
+    const department = document.getElementById("department").value;
     const isAdvocate = document.querySelector('input[name="flag"]:checked')
         .value;
     const position = document.getElementById("position").value;
-    const result = contractFilters(contractType, workModality, careerLevel, position);
+    const result = contractFilters(contractType, workModality, careerLevel, department, position);
     console.log(result);
 });
-function contractFilters(contractType, workModality, careerLevel, position) {
+function contractFilters(contractType, workModality, careerLevel, department, position) {
     let result = "";
     function normalizePosition(position) {
         return position
@@ -37,7 +38,7 @@ function contractFilters(contractType, workModality, careerLevel, position) {
         `;
         }
     }
-    result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+    result += `${termOfWork(contractType, careerLevel, department, normalizePosition(position))}
   `;
     return result;
 }
