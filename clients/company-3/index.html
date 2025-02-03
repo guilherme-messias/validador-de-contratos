@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Melhor Envio</title>
+    <script type="module" src="../../dist/company-3/index.js" defer></script>
   </head>
   <body>
     <header>
@@ -14,7 +17,55 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <form id="contract-details-form" method="post">
+        <div>
+          <label>Tipo de contrato:</label>
+          <select id="contract-type" name="contract-type" required>
+            <option value="contract-permanent" name="contract-permanent">Indeterminado</option>
+            <option value="contract-apprentice" name="contract-apprentice">Aprendiz</option>
+            <option value="contract-inter" name="contract-inter">Estagiário</option>
+            <option value="contract-temporary" name="contract-temporary">Determinado</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Nível de carreira:</label>
+          <select id="career-level" name="career-level" required>
+            <option value="career-level-others" name="career-level-others">Outros</option>
+            <option value="career-level-specialist-II" name="career-level-specialist-II">
+              Especialista II
+            </option>
+            <option value="career-level-coordinator" name="career-level-coordinator">
+              Coordenador
+            </option>
+            <option value="career-level-manager" name="career-level-manager">Gerente</option>
+            <option value="career-level-director-CLT" name="career-level-director-CLT">
+              Diretor CLT
+            </option>
+            <option value="career-level-director" name="career-level-director">
+              Diretor sem FGTS
+            </option>
+          </select>
+        </div>
+
+        <div>
+          <label>Horas Mensais:</label>
+          <select id="monthly-hours" name="monthly-hours" required>
+            <option value="monthly-hours-200" name="monthly-hours-200">200</option>
+            <option value="monthly-hours-180" name="monthly-hours-180">180</option>
+            <option value="monthly-hours-150" name="monthly-hours-150">150</option>
+          </select>
+        </div>
+
+        <button>Enviar</button>
+      </form>
+
+      <div id="result"></div>
+
+      <!-- Ocultar botão com js -->
+      <input type="button" value="Realizar nova consulta" id="btn-new-query" />
+    </main>
     <footer>
       <p>© 2025 - Todos os direitos reservados</p>
     </footer>
