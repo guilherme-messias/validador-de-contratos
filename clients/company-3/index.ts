@@ -9,26 +9,21 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 
   const contractType = (document.getElementById("contract-type") as HTMLSelectElement).value;
   const careerLevel = (document.getElementById("career-level") as HTMLSelectElement).value;
-  const monthlyHours = (document.getElementById("monthly-hours") as HTMLSelectElement).value;  
+  const monthlyHours = (document.getElementById("monthly-hours") as HTMLSelectElement).value;
 
   const result = contractFilters(contractType, careerLevel, monthlyHours);
   console.log(result);
 });
 
-function contractFilters(
-  contractType: string,
-  careerLevel: string,
-  monthlyHours: string,
-): string {
+function contractFilters(contractType: string, careerLevel: string, monthlyHours: string): string {
   let result = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
     result += `${contractMonthlyHours(monthlyHours)}
     `;
-    }
   }
 
-  result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+  result += `${termOfWork(careerLevel)}
   `;
 
   return result;
