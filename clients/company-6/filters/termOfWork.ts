@@ -25,31 +25,36 @@ export default function termOfWork(
     `;
   }
 
-  // if (
-  //   careerLevel === "career-level-coordinator" ||
-  //   careerLevel === "career-level-manager" ||
-  //   careerLevel === "career-level-tech-leader"
-  // ) {
-  //   result += `Aditivo Cargo de Confiança () - 36545
-  //   `;
-  // }
+  if (
+    careerLevel === "career-level-coordinator" ||
+    careerLevel === "career-level-manager" ||
+    careerLevel === "career-level-director" ||
+    careerLevel === "career-level-director-CLT"
+  ) {
+    result += `emp - 'POLÍTICA PARTES RELACIONADAS - TERMO DE RECEBIMENTO (30173)
+    `;
+  }
 
-  // if (department === "department-i") {
-  //   result += `Aditivo SDR A.E. (cargos diretoria pre vendas) - 36552
-  //     `;
-  // }
+  if (
+    careerLevel !== "career-level-coordinator" &&
+    careerLevel !== "career-level-manager" &&
+    careerLevel !== "career-level-director" &&
+    careerLevel !== "career-level-director-CLT" &&
+    contractType !== "contract-inter" &&
+    contractType !== "contract-apprentice"
+  ) {
+    result += `emp - Termo de Recebimento e Aceite- Banco de Horas- Empresa 039 (36261)
+    `;
+  }
 
-  // if (department === "department-ii" && careerLevel !== "career-level-coordinator") {
-  //   result += `Aditivo AE (cargos diretoria 'vendas') - 36551
-  //     `;
-  // }
-
-  // if (department === "department-ii" && careerLevel === "career-level-coordinator") {
-  //   result += `ADITIVO TEAM LEADER A.E. (coordenador de 'vendas') - 36550
-  //     `;
-  // }
-
-  result += `emp - TERMOS COLABORADORES - OCTADESK (36546)
+  result += `sis - OPÇÃO DE VALE TRANSPORTE (30)
+      gru - DECLARACAO DE DEPENDENTES PARA IMPOSTO RENDA (30940)
+      emp - 'POLÍTICA NEGOCIAÇÃO COM VALORES IMOBILIÁRIOS - TERMO ADESÃO (30179) 
+      emp - 'POLÍTICA PRIVACIDADE COLABORADORES - TERMO DE RECEBIMENTO (30174) 
+      emp - 'POLÍTICA SEGURANÇA DA INFORMAÇÃO - TERMO DE RECEBIMENTO (30176) 
+      emp - 'POLÍTICA USO INFOS E DIVULGAÇÃO DE ATO/ FATO - TERMO ADESÃO (30177) 
+      emp - 'TERMO CESSÃO DE NOME, IMAGEM E SOM DE VOZ (30170) 
+      emp - 'TERMO DE CONFIDENCIALIDADE (30172) 
   `;
 
   return result;
