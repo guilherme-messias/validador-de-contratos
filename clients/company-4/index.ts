@@ -29,8 +29,6 @@ function contractFilters(
   `;
   }
 
-  // todo: finalizar preenchimento da lógica termos octa
-
   result += `${termOfWork(careerLevel, department)}
   `;
 

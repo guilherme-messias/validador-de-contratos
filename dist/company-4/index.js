@@ -17,7 +17,6 @@ function contractFilters(contractType, workModality, careerLevel, department) {
         result += `${contract(workModality)}
   `;
     }
-    // todo: finalizar preenchimento da lógica termos octa
     result += `${termOfWork(careerLevel, department)}
   `;
     return result;
