@@ -26,7 +26,7 @@ function contractFilters(
   `;
   }
 
-  result += `${termOfWork(careerLevel, department)}
+  result += `${termOfWork(careerLevel, workModality, contractType)}
   `;
 
   return result;
