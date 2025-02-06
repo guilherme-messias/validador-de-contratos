@@ -8,16 +8,16 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
     const department = document.getElementById("department").value;
-    const result = contractFilters(contractType, workModality, careerLevel, department);
-    console.log(result);
+    const contractCodes = contractFilters(contractType, workModality, careerLevel, department);
+    console.log(contractCodes);
 });
 function contractFilters(contractType, workModality, careerLevel, department) {
-    let result = "";
+    let contractCodes = "";
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-        result += `${contract(workModality)}
+        contractCodes += `${contract(workModality)}
   `;
     }
-    result += `${termOfWork(careerLevel, department)}
+    contractCodes += `${termOfWork(careerLevel, department)}
   `;
-    return result;
+    return contractCodes;
 }

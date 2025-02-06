@@ -10,24 +10,20 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const workModality = (document.getElementById("work-modality") as HTMLSelectElement).value;
   const careerLevel = (document.getElementById("career-level") as HTMLSelectElement).value;
 
-  const result = contractFilters(contractType, workModality, careerLevel);
-  console.log(result);
+  const contractCodes = contractFilters(contractType, workModality, careerLevel);
+  console.log(contractCodes);
 });
 
-function contractFilters(
-  contractType: string,
-  workModality: string,
-  careerLevel: string,
-): string {
-  let result = "";
+function contractFilters(contractType: string, workModality: string, careerLevel: string): string {
+  let contractCodes = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    result += `emp - Contrato de Trabalho_Empresa 039 (36255)
+    contractCodes += `emp - Contrato de Trabalho_Empresa 039 (36255)
   `;
   }
 
-  result += `${termOfWork(careerLevel, workModality, contractType)}
+  contractCodes += `${termOfWork(careerLevel, workModality, contractType)}
   `;
 
-  return result;
+  return contractCodes;
 }

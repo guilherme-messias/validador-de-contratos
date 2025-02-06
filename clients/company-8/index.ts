@@ -16,8 +16,8 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     .value;
   const position = (document.getElementById("position") as HTMLSelectElement).value;
 
-  const result = contractFilters(contractType, workModality, careerLevel, position);
-  console.log(result);
+  const contractCodes = contractFilters(contractType, workModality, careerLevel, position);
+  console.log(contractCodes);
 });
 
 function contractFilters(
@@ -26,7 +26,7 @@ function contractFilters(
   careerLevel: string,
   position: string
 ): string {
-  let result = "";
+  let contractCodes = "";
 
   function normalizePosition(position: string): string {
     return position
@@ -37,23 +37,23 @@ function contractFilters(
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
     if (workModality === "modality-office") {
-      result += `${contractModalityOffice(careerLevel, contractType)}
+      contractCodes += `${contractModalityOffice(careerLevel, contractType)}
   `;
     }
 
     if (workModality === "modality-home-office") {
-      result += `${contractModalityHomeOffice(careerLevel, contractType)}    
+      contractCodes += `${contractModalityHomeOffice(careerLevel, contractType)}    
       `;
     }
 
     if (workModality === "modality-hybrid") {
-      result += `${contractModalityHybrid(careerLevel, contractType)}
+      contractCodes += `${contractModalityHybrid(careerLevel, contractType)}
         `;
     }
   }
 
-  result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+  contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
   `;
 
-  return result;
+  return contractCodes;
 }

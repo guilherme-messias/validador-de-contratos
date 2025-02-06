@@ -1,18 +1,18 @@
 export default function contractModalityOffice(careerLevel: string, contractType: string): string {
-  let result = "";
+  let contractCodes = "";
   if (
     careerLevel !== "career-level-specialist-II" &&
     careerLevel !== "career-level-coordinator" &&
     contractType !== "contract-temporary"
   ) {
-    result += `emp - **CONTRATO DE TRABALHO - INDETERMINADO (30511)   
+    contractCodes += `emp - **CONTRATO DE TRABALHO - INDETERMINADO (30511)   
     `;
   }
   if (
     (careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
     contractType !== "contract-temporary"
   ) {
-    result += `emp - CONTRATO DE TRABALHO - INDETERMINADO CARGO CONFIANÇA 60/40 (30513)   
+    contractCodes += `emp - CONTRATO DE TRABALHO - INDETERMINADO CARGO CONFIANÇA 60/40 (30513)   
       `;
   }
 
@@ -21,7 +21,7 @@ export default function contractModalityOffice(careerLevel: string, contractType
     careerLevel !== "career-level-coordinator" &&
     contractType === "contract-temporary"
   ) {
-    result += `emp - **CONTRATO DE TRABALHO - DETERMINADO (30508)    
+    contractCodes += `emp - **CONTRATO DE TRABALHO - DETERMINADO (30508)    
       `;
   }
 
@@ -29,9 +29,9 @@ export default function contractModalityOffice(careerLevel: string, contractType
     (careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
     contractType === "contract-temporary"
   ) {
-    result += `emp - **CONTRATO DE TRABALHO - DETERMINADO CARGO CONFIANÇA 60/40 (30510)      
+    contractCodes += `emp - **CONTRATO DE TRABALHO - DETERMINADO CARGO CONFIANÇA 60/40 (30510)      
       `;
   }
 
-  return result;
+  return contractCodes;
 }

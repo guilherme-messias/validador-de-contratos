@@ -12,11 +12,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const isAdvocate = document.querySelector('input[name="flag"]:checked')
         .value;
     const position = document.getElementById("position").value;
-    const result = contractFilters(contractType, workModality, careerLevel, position);
-    console.log(result);
+    const contractCodes = contractFilters(contractType, workModality, careerLevel, position);
+    console.log(contractCodes);
 });
 function contractFilters(contractType, workModality, careerLevel, position) {
-    let result = "";
+    let contractCodes = "";
     function normalizePosition(position) {
         return position
             .toUpperCase()
@@ -25,19 +25,19 @@ function contractFilters(contractType, workModality, careerLevel, position) {
     }
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
         if (workModality === "modality-office") {
-            result += `${contractModalityOffice(careerLevel, contractType)}
+            contractCodes += `${contractModalityOffice(careerLevel, contractType)}
   `;
         }
         if (workModality === "modality-home-office") {
-            result += `${contractModalityHomeOffice(careerLevel, contractType)}    
+            contractCodes += `${contractModalityHomeOffice(careerLevel, contractType)}    
       `;
         }
         if (workModality === "modality-hybrid") {
-            result += `${contractModalityHybrid(careerLevel, contractType)}
+            contractCodes += `${contractModalityHybrid(careerLevel, contractType)}
         `;
         }
     }
-    result += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+    contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
   `;
-    return result;
+    return contractCodes;
 }

@@ -3,25 +3,25 @@ export default function termOfWork(
   workModality: string,
   contractType: string
 ): string {
-  let result = "";
+  let contractCodes = "";
 
   if (contractType !== "contract-inter") {
     if (workModality === "modality-hybrid") {
-      result += `TERMO DE TRABALHO HIBRIDO (30822)
+      contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)
       `;
     }
 
     if (workModality === "modality-home-office") {
-      result += `TERMO DE TELETRABALHO HOME OFFICE (30824)
+      contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)
       `;
     }
 
     if (workModality === "modality-remote") {
-      result += `TERMO DE TELETRABALHO INTEGRAL (36910)
+      contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)
       `;
     }
 
-    result += `sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)
+    contractCodes += `sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)
     `;
   }
 
@@ -31,7 +31,7 @@ export default function termOfWork(
     careerLevel === "career-level-director" ||
     careerLevel === "career-level-director-CLT"
   ) {
-    result += `emp - 'POLÍTICA PARTES RELACIONADAS - TERMO DE RECEBIMENTO (30173)
+    contractCodes += `emp - 'POLÍTICA PARTES RELACIONADAS - TERMO DE RECEBIMENTO (30173)
     `;
   }
 
@@ -43,11 +43,11 @@ export default function termOfWork(
     contractType !== "contract-inter" &&
     contractType !== "contract-apprentice"
   ) {
-    result += `emp - Termo de Recebimento e Aceite- Banco de Horas- Empresa 039 (36261)
+    contractCodes += `emp - Termo de Recebimento e Aceite- Banco de Horas- Empresa 039 (36261)
     `;
   }
 
-  result += `sis - OPÇÃO DE VALE TRANSPORTE (30)
+  contractCodes += `sis - OPÇÃO DE VALE TRANSPORTE (30)
       gru - DECLARACAO DE DEPENDENTES PARA IMPOSTO RENDA (30940)
       emp - 'POLÍTICA NEGOCIAÇÃO COM VALORES IMOBILIÁRIOS - TERMO ADESÃO (30179) 
       emp - 'POLÍTICA PRIVACIDADE COLABORADORES - TERMO DE RECEBIMENTO (30174) 
@@ -57,5 +57,5 @@ export default function termOfWork(
       emp - 'TERMO DE CONFIDENCIALIDADE (30172) 
   `;
 
-  return result;
+  return contractCodes;
 }

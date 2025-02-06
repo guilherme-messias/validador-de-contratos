@@ -11,20 +11,20 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const careerLevel = (document.getElementById("career-level") as HTMLSelectElement).value;
   const monthlyHours = (document.getElementById("monthly-hours") as HTMLSelectElement).value;
 
-  const result = contractFilters(contractType, careerLevel, monthlyHours);
-  console.log(result);
+  const contractCodes = contractFilters(contractType, careerLevel, monthlyHours);
+  console.log(contractCodes);
 });
 
 function contractFilters(contractType: string, careerLevel: string, monthlyHours: string): string {
-  let result = "";
+  let contractCodes = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    result += `${contractMonthlyHours(monthlyHours)}
+    contractCodes += `${contractMonthlyHours(monthlyHours)}
     `;
   }
 
-  result += `${termOfWork(careerLevel)}
+  contractCodes += `${termOfWork(careerLevel)}
   `;
 
-  return result;
+  return contractCodes;
 }

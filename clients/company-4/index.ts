@@ -12,8 +12,8 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const careerLevel = (document.getElementById("career-level") as HTMLSelectElement).value;
   const department = (document.getElementById("department") as HTMLSelectElement).value;
 
-  const result = contractFilters(contractType, workModality, careerLevel, department);
-  console.log(result);
+  const contractCodes = contractFilters(contractType, workModality, careerLevel, department);
+  console.log(contractCodes);
 });
 
 function contractFilters(
@@ -22,15 +22,15 @@ function contractFilters(
   careerLevel: string,
   department: string
 ): string {
-  let result = "";
+  let contractCodes = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    result += `${contract(workModality)}
+    contractCodes += `${contract(workModality)}
   `;
   }
 
-  result += `${termOfWork(careerLevel, department)}
+  contractCodes += `${termOfWork(careerLevel, department)}
   `;
 
-  return result;
+  return contractCodes;
 }

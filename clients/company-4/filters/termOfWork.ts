@@ -1,32 +1,32 @@
 export default function termOfWork(careerLevel: string, department: string): string {
-  let result = "";
+  let contractCodes = "";
 
   if (
     careerLevel === "career-level-coordinator" ||
     careerLevel === "career-level-manager" ||
     careerLevel === "career-level-tech-leader"
   ) {
-    result += `Aditivo Cargo de Confiança () - 36545
+    contractCodes += `Aditivo Cargo de Confiança () - 36545
     `;
   }
 
   if (department === "department-i") {
-    result += `Aditivo SDR A.E. (cargos diretoria pre vendas) - 36552   
+    contractCodes += `Aditivo SDR A.E. (cargos diretoria pre vendas) - 36552   
       `;
   }
 
   if (department === "department-ii" && careerLevel !== "career-level-coordinator") {
-    result += `Aditivo AE (cargos diretoria 'vendas') - 36551      
+    contractCodes += `Aditivo AE (cargos diretoria 'vendas') - 36551      
       `;
   }
 
   if (department === "department-ii" && careerLevel === "career-level-coordinator") {
-    result += `ADITIVO TEAM LEADER A.E. (coordenador de 'vendas') - 36550      
+    contractCodes += `ADITIVO TEAM LEADER A.E. (coordenador de 'vendas') - 36550      
       `;
   }
 
-  result += `emp - TERMOS COLABORADORES - OCTADESK (36546)
+  contractCodes += `emp - TERMOS COLABORADORES - OCTADESK (36546)
   `;
 
-  return result;
+  return contractCodes;
 }

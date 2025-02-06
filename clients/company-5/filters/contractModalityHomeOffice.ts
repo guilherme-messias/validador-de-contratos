@@ -2,14 +2,14 @@ export default function contractModalityHomeOffice(
   careerLevel: string,
   contractType: string
 ): string {
-  let result = "";
+  let contractCodes = "";
 
   if (
     careerLevel !== "career-level-specialist-II" &&
     careerLevel !== "career-level-coordinator" &&
     contractType !== "contract-temporary"
   ) {
-    result += `emp - **CONTRATO DE TRABALHO - TELETRABALHO(30514)
+    contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO(30514)
     `;
   }
 
@@ -17,9 +17,9 @@ export default function contractModalityHomeOffice(
     (careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
     contractType !== "contract-temporary"
   ) {
-    result += `emp - **CONTRATO DE TRABALHO - TELETRABALHO CARGO CONFIANÇA 60/40 (30515)   
+    contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO CARGO CONFIANÇA 60/40 (30515)   
       `;
   }
 
-  return result;
+  return contractCodes;
 }

@@ -7,16 +7,16 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const contractType = document.getElementById("contract-type").value;
     const careerLevel = document.getElementById("career-level").value;
     const monthlyHours = document.getElementById("monthly-hours").value;
-    const result = contractFilters(contractType, careerLevel, monthlyHours);
-    console.log(result);
+    const contractCodes = contractFilters(contractType, careerLevel, monthlyHours);
+    console.log(contractCodes);
 });
 function contractFilters(contractType, careerLevel, monthlyHours) {
-    let result = "";
+    let contractCodes = "";
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-        result += `${contractMonthlyHours(monthlyHours)}
+        contractCodes += `${contractMonthlyHours(monthlyHours)}
     `;
     }
-    result += `${termOfWork(careerLevel)}
+    contractCodes += `${termOfWork(careerLevel)}
   `;
-    return result;
+    return contractCodes;
 }
