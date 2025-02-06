@@ -10,20 +10,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
     const department = document.getElementById("department").value;
-    const isAdvocate = document.querySelector('input[name="flag"]:checked')
-        .value;
-    const position = document.getElementById("position").value;
-    const result = contractFilters(contractType, workModality, careerLevel, department, position);
+    const result = contractFilters(contractType, workModality, careerLevel, department);
     console.log(result);
 });
-function contractFilters(contractType, workModality, careerLevel, department, position) {
+function contractFilters(contractType, workModality, careerLevel, department) {
     let result = "";
-    function normalizePosition(position) {
-        return position
-            .toUpperCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "-");
-    }
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
         if (workModality === "modality-office") {
             result += `${contractModalityOffice(careerLevel, contractType)}
@@ -38,7 +29,7 @@ function contractFilters(contractType, workModality, careerLevel, department, po
         `;
         }
     }
-    result += `${termOfWork(contractType, careerLevel, department, normalizePosition(position))}
+    result += `${termOfWork(contractType, careerLevel, department)}
   `;
     return result;
 }

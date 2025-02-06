@@ -1,4 +1,4 @@
-export default function termOfWork(contractType, careerLevel, department, position) {
+export default function termOfWork(contractType, careerLevel, department) {
     let result = "";
     if (contractType !== "contract-apprentice" &&
         contractType !== "contract-inter" &&

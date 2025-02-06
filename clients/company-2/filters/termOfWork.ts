@@ -2,7 +2,6 @@ export default function termOfWork(
   contractType: string,
   careerLevel: string,
   department: string,
-  position: string
 ): string {
   let result = "";
   if (
