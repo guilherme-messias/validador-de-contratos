@@ -1,43 +1,32 @@
-export default function termOfWork(
-  careerLevel: string,
-  department: string
-): string {
+export default function termOfWork(careerLevel: string, department: string): string {
   let result = "";
-  // if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-  //   result += `VR: emp - *AUTORIZAÇÃO DE DESCONTO VALE REFEIÇÃO (30518)
-  //    `;
-  // }
 
-  // if (careerLevel === "career-level-director-CLT" || careerLevel === "career-level-director") {
-  //   result += `DIRETORES - emp - TERMO DE SOLICITAÇÃO DE VEÍCULO CORPORATIVO - LWSA (36797)
-  //   `;
-  // }
+  if (
+    careerLevel === "career-level-coordinator" ||
+    careerLevel === "career-level-manager" ||
+    careerLevel === "career-level-tech-leader"
+  ) {
+    result += `Aditivo Cargo de Confiança () - 36545
+    `;
+  }
 
-  // if (position.includes("CONSULTOR DE VENDAS ONLINE")) {
-  //   result += `ADITIVO AO CONTRATO DE TRABALHO_Consultor de Vendas Inside Sales - 36755"   
-  //     `;
-  // }
+  if (department === "department-i") {
+    result += `Aditivo SDR A.E. (cargos diretoria pre vendas) - 36552   
+      `;
+  }
 
-  // if (position.includes("EXECUTIVO DE VENDAS ONLINE I")) {
-  //   result += `ADITIVO AO CONTRATO DE TRABALHO_Executivo de Vendas Inside Sales - 36756"      
-  //     `;
-  // }
+  if (department === "department-ii" && careerLevel !== "career-level-coordinator") {
+    result += `Aditivo AE (cargos diretoria 'vendas') - 36551      
+      `;
+  }
 
-  // if (position.includes("COORDENADOR DE VENDAS ONLINE II")) {
-  //   result += `ADITIVO AO CONTRATO DE TRABALHO_Coordenadores Inside Sales - 36757
-  //     `;
-  // }
-  // if (
-  //   position.includes("CONSULTOR DE RETENCAO") ||
-  //   position.includes("EXECUTIVO DE RETENCAO") ||
-  //   position.includes("COORDENADOR DE RETENCAO")
-  // ) {
-  //   result += `ADITIVO NOVOS CONTRATADOS - COSTUMER CARE  2023 + POLÍTICA - 36758
-  //     `;
-  // }
+  if (department === "department-ii" && careerLevel === "career-level-coordinator") {
+    result += `ADITIVO TEAM LEADER A.E. (coordenador de 'vendas') - 36550      
+      `;
+  }
 
-  // result += `emp - TERMOS COLABORADORES - LWSA (36833)
-  // `;
+  result += `emp - TERMOS COLABORADORES - OCTADESK (36546)
+  `;
 
   return result;
 }
