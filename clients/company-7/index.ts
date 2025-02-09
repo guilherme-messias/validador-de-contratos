@@ -16,7 +16,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     .value;
   const position = (document.getElementById("position") as HTMLSelectElement).value;
 
-  const contractCodes = admissionFilters(contractType, workModality, careerLevel, position);
+  const contractCodes = admissionFilters(contractType, workModality, careerLevel, position, isAdvocate);
   console.log(contractCodes);
 });
 
@@ -24,9 +24,11 @@ function admissionFilters(
   contractType: string,
   workModality: string,
   careerLevel: string,
-  position: string
+  position: string,
+  isAdvocate: string
 ): string {
   let contractCodes = "";
+  let admissionKit = "";
 
   function normalizePosition(position: string): string {
     return position
@@ -35,25 +37,49 @@ function admissionFilters(
       .replace(/[\u0300-\u036f]/g, "-");
   }
 
-  if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
+  if (
+    contractType !== "contract-apprentice" &&
+    careerLevel !== "career-level-director" &&
+    contractType !== "contract-inter"
+  ) {
     if (workModality === "modality-office") {
-      contractCodes += `${contractModalityOffice(careerLevel, contractType)}
-  `;
+      const [code, kit] = contractModalityOffice(careerLevel, contractType);
+
+      contractCodes += `${code}\n`;
+      admissionKit += `${kit}\n`;
     }
 
     if (workModality === "modality-home-office") {
-      contractCodes += `${contractModalityHomeOffice(careerLevel, contractType)}    
-      `;
+      const [code, kit] = contractModalityHomeOffice(careerLevel, contractType);
+
+      contractCodes += `${code}\n`;
+      admissionKit += `${kit}\n`;
     }
 
     if (workModality === "modality-hybrid") {
-      contractCodes += `${contractModalityHybrid(careerLevel, contractType)}
-        `;
+      const [code, kit] = contractModalityHybrid(careerLevel, contractType);
+
+      contractCodes += `${code}\n`;
+      admissionKit += `${kit}\n`;
     }
   }
 
-  contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
-  `;
+  if (contractType === "contract-apprentice") {
+    admissionKit += `Titulo: APRENDIZ\n`;
+  }
 
-  return contractCodes;
+  if (contractType === "contract-inter") {
+    admissionKit += `Titulo: ESTAGIARIO\n`;
+  }
+
+  if (careerLevel === "career-level-director") {
+    admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO\n`;
+  }
+
+  const [code, kit] = termOfWork(contractType, careerLevel, normalizePosition(position), isAdvocate);
+
+  contractCodes += `${code}\n`;
+  admissionKit += `${kit}\n`;
+
+  return `${contractCodes}\n${admissionKit}`;
 }
