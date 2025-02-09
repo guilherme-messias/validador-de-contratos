@@ -15,10 +15,8 @@ function admissionFilters(contractType, workModality, careerLevel) {
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
         contractCodes += `emp - Contrato de Trabalho_Empresa 039 (36255)\n`;
     }
-    if (contractType === "contract-apprentice") {
-        admissionKit += `emp - Contrato de Aprendizagem_Empresa 039 (36256)\n`;
-    }
-    contractCodes += `${termOfWork(careerLevel, workModality, contractType)}
-  `;
+    const [code, kit] = termOfWork(careerLevel, workModality, contractType);
+    contractCodes += `${code}\n`;
+    admissionKit += `${kit}\n`;
     return `${contractCodes}\n${admissionKit}`;
 }

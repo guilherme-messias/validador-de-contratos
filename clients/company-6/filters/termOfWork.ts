@@ -26,40 +26,44 @@ export default function termOfWork(
 
     if (contractType === "contract-apprentice") {
       if (workModality === "modality-hybrid") {
-        contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)
-        `;
+        contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)\n`;
+        admissionKit += `Titulo: APRENDIZ | HIBRIDO\n`;
       }
 
       if (workModality === "modality-home-office") {
-        contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)
-        `;
+        contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)\n`;
+        admissionKit += `Titulo: APRENDIZ | HOME-OFFICE\n`;
       }
 
       if (workModality === "modality-remote") {
-        contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)
-        `;
+        contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)\n`;
+        admissionKit += `Titulo: APRENDIZ | TELETRABALHO\n`;
       }
     }
 
     if (contractType !== "contract-apprentice" && careerLevel !== "career-level-others") {
       if (workModality === "modality-hybrid") {
-        contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)
-        `;
+        contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)\n`;
+        admissionKit += `Titulo: COLABORADOR | HIBRIDO | LIDER\n`;
       }
 
       if (workModality === "modality-home-office") {
-        contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)
-        `;
+        contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)\n`;
+        admissionKit += `Titulo: COLABORADOR | HOME-OFFICE | LIDER\n`;
       }
 
       if (workModality === "modality-remote") {
-        contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)
-        `;
+        contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)\n`;
+        admissionKit += `Titulo: COLABORADOR | TELETRABALHO | LIDER\n`;
       }
     }
 
     contractCodes += `sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)
     `;
+  }
+
+  if (contractType === "contract-inter") {
+    admissionKit += `Titulo: ESTAGIARIO\n`;
   }
 
   if (
