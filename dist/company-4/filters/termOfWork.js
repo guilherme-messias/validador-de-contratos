@@ -18,6 +18,7 @@ export default function termOfWork(careerLevel, department) {
         contractCodes += `ADITIVO TEAM LEADER A.E. (coordenador de 'vendas') - 36550      
       `;
     }
+    // todo: adicionar termo veículo
     contractCodes += `emp - TERMOS COLABORADORES - OCTADESK (36546)
   `;
     return contractCodes;

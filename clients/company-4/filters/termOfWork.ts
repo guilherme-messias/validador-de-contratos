@@ -25,6 +25,8 @@ export default function termOfWork(careerLevel: string, department: string): str
       `;
   }
 
+  // todo: adicionar termo veículo
+
   contractCodes += `emp - TERMOS COLABORADORES - OCTADESK (36546)
   `;
 

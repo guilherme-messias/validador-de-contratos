@@ -23,11 +23,13 @@ function admissionFilters(
   department: string
 ): string {
   let contractCodes = "";
+  let admissionKit = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    contractCodes += `${contract(workModality)}
+    contractCodes += `${contract(contractType, workModality, department, careerLevel)}
   `;
   }
+
 
   contractCodes += `${termOfWork(careerLevel, department)}
   `;
