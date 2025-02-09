@@ -38,8 +38,10 @@ function admissionFilters(
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
     if (workModality === "modality-office") {
-      contractCodes += `${contractModalityOffice(careerLevel, contractType)}
-  `;
+      const [code, kit] = contractModalityOffice(careerLevel, contractType);
+
+      contractCodes += `${code}\n`;
+      admissionKit += `${kit}\n`;
     }
 
     if (workModality === "modality-home-office") {
@@ -48,14 +50,15 @@ function admissionFilters(
     }
 
     if (workModality === "modality-hybrid") {
-      contractCodes += `${contractModalityHybrid(careerLevel, contractType)}
-        `;
+      const [code, kit] = contractModalityHybrid(careerLevel, contractType);
+
+      contractCodes += `${code}\n`;
+      admissionKit += `${kit}\n`;
     }
   }
 
   contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
   `;
 
-  return `${contractCodes}
-  ${admissionKit}`;
+  return `${contractCodes}\n${admissionKit}`;
 }
