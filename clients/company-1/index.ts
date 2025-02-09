@@ -50,7 +50,6 @@ function admissionFilters(
       contractCodes += `${code}\n`;
       admissionKit += `${kit}\n`;
     }
-    }
 
     if (workModality === "modality-hybrid") {
       const [code, kit] = contractModalityHybrid(careerLevel, contractType);

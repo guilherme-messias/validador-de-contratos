@@ -35,13 +35,13 @@ function admissionFilters(contractType, workModality, careerLevel, position) {
             contractCodes += `${code}\n`;
             admissionKit += `${kit}\n`;
         }
+        if (workModality === "modality-hybrid") {
+            const [code, kit] = contractModalityHybrid(careerLevel, contractType);
+            contractCodes += `${code}\n`;
+            admissionKit += `${kit}\n`;
+        }
     }
-    if (workModality === "modality-hybrid") {
-        const [code, kit] = contractModalityHybrid(careerLevel, contractType);
-        contractCodes += `${code}\n`;
-        admissionKit += `${kit}\n`;
-    }
-}
-contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
+    contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
   `;
-return `${contractCodes}\n${admissionKit}`;
+    return `${contractCodes}\n${admissionKit}`;
+}
