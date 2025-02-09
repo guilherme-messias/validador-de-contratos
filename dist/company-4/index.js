@@ -3,21 +3,21 @@ import termOfWork from "./filters/termOfWork.js";
 const btnNewQuery = document.getElementById("btn-new-query");
 btnNewQuery.classList.add("hidden");
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const contractType = document.getElementById("contract-type").value;
-    const workModality = document.getElementById("work-modality").value;
-    const careerLevel = document.getElementById("career-level").value;
-    const department = document.getElementById("department").value;
-    const contractCodes = contractFilters(contractType, workModality, careerLevel, department);
-    console.log(contractCodes);
+  event.preventDefault();
+  const contractType = document.getElementById("contract-type").value;
+  const workModality = document.getElementById("work-modality").value;
+  const careerLevel = document.getElementById("career-level").value;
+  const department = document.getElementById("department").value;
+  const contractCodes = admissionFilters(contractType, workModality, careerLevel, department);
+  console.log(contractCodes);
 });
-function contractFilters(contractType, workModality, careerLevel, department) {
-    let contractCodes = "";
-    if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-        contractCodes += `${contract(workModality)}
+function admissionFilters(contractType, workModality, careerLevel, department) {
+  let contractCodes = "";
+  if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
+    contractCodes += `${contract(workModality)}
   `;
-    }
-    contractCodes += `${termOfWork(careerLevel, department)}
+  }
+  contractCodes += `${termOfWork(careerLevel, department)}
   `;
-    return contractCodes;
+  return contractCodes;
 }

@@ -10,11 +10,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const workModality = (document.getElementById("work-modality") as HTMLSelectElement).value;
   const careerLevel = (document.getElementById("career-level") as HTMLSelectElement).value;
 
-  const contractCodes = contractFilters(contractType, workModality, careerLevel);
+  const contractCodes = admissionFilters(contractType, workModality, careerLevel);
   console.log(contractCodes);
 });
 
-function contractFilters(contractType: string, workModality: string, careerLevel: string): string {
+function admissionFilters(contractType: string, workModality: string, careerLevel: string): string {
   let contractCodes = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {

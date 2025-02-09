@@ -16,17 +16,18 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     .value;
   const position = (document.getElementById("position") as HTMLSelectElement).value;
 
-  const contractCodes = contractFilters(contractType, workModality, careerLevel, position);
+  const contractCodes = admissionFilters(contractType, workModality, careerLevel, position);
   console.log(contractCodes);
 });
 
-function contractFilters(
+function admissionFilters(
   contractType: string,
   workModality: string,
   careerLevel: string,
   position: string
 ): string {
   let contractCodes = "";
+  let admissionKit = "";
 
   function normalizePosition(position: string): string {
     return position

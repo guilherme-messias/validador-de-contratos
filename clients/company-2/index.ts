@@ -14,11 +14,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const careerLevel = (document.getElementById("career-level") as HTMLSelectElement).value;
   const department = (document.getElementById("department") as HTMLSelectElement).value;
 
-  const contractCodes = contractFilters(contractType, workModality, careerLevel, department);
+  const contractCodes = admissionFilters(contractType, workModality, careerLevel, department);
   console.log(contractCodes);
 });
 
-function contractFilters(
+function admissionFilters(
   contractType: string,
   workModality: string,
   careerLevel: string,
