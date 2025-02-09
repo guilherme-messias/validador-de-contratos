@@ -57,6 +57,10 @@ function admissionFilters(
       contractCodes += `${code}\n`;
       admissionKit += `${kit}\n`;
     }
+  } else if (contractType === "contract-apprentice") {
+    admissionKit += `Titulo: APRENDIZ\n`;
+  } else {
+    admissionKit += `Titulo: ESTAGIARIO\n`;
   }
 
   contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
