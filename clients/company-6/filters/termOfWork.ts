@@ -58,8 +58,7 @@ export default function termOfWork(
       }
     }
 
-    contractCodes += `sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)
-    `;
+    contractCodes += `sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)\n`;
   }
 
   if (contractType === "contract-inter") {
@@ -72,8 +71,7 @@ export default function termOfWork(
     careerLevel === "career-level-director" ||
     careerLevel === "career-level-director-CLT"
   ) {
-    contractCodes += `emp - 'POLÍTICA PARTES RELACIONADAS - TERMO DE RECEBIMENTO (30173)
-    `;
+    contractCodes += `emp - 'POLÍTICA PARTES RELACIONADAS - TERMO DE RECEBIMENTO (30173)\n`;
   }
 
   if (
@@ -84,8 +82,7 @@ export default function termOfWork(
     contractType !== "contract-inter" &&
     contractType !== "contract-apprentice"
   ) {
-    contractCodes += `emp - Termo de Recebimento e Aceite- Banco de Horas- Empresa 039 (36261)
-    `;
+    contractCodes += `emp - Termo de Recebimento e Aceite- Banco de Horas- Empresa 039 (36261)\n`;
   }
 
   contractCodes += `sis - OPÇÃO DE VALE TRANSPORTE (30)\ngru - DECLARACAO DE DEPENDENTES PARA IMPOSTO RENDA (30940)\nemp - 'POLÍTICA NEGOCIAÇÃO COM VALORES IMOBILIÁRIOS - TERMO ADESÃO (30179)\nemp - 'POLÍTICA PRIVACIDADE COLABORADORES - TERMO DE RECEBIMENTO (30174)\nemp - 'POLÍTICA SEGURANÇA DA INFORMAÇÃO - TERMO DE RECEBIMENTO (30176)\nemp - 'POLÍTICA USO INFOS E DIVULGAÇÃO DE ATO/ FATO - TERMO ADESÃO (30177)\nemp - 'TERMO CESSÃO DE NOME, IMAGEM E SOM DE VOZ (30170)\nemp - 'TERMO DE CONFIDENCIALIDADE (30172)\n`;
