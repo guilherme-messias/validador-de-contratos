@@ -24,7 +24,9 @@ function admissionFilters(contractType, workModality, careerLevel, position) {
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "-");
     }
-    if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
+    if (contractType !== "contract-apprentice" &&
+        careerLevel !== "career-level-director" &&
+        contractType !== "contract-inter") {
         if (workModality === "modality-office") {
             const [code, kit] = contractModalityOffice(careerLevel, contractType);
             contractCodes += `${code}\n`;
@@ -46,6 +48,9 @@ function admissionFilters(contractType, workModality, careerLevel, position) {
     }
     if (contractType === "contract-inter") {
         admissionKit += `Titulo: ESTAGIARIO\n`;
+    }
+    if (careerLevel === "career-level-director") {
+        admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO\n`;
     }
     contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
   `;
