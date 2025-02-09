@@ -2,7 +2,7 @@ export default function termOfWork(careerLevel, workModality, contractType) {
     let contractCodes = "";
     let admissionKit = "";
     if (contractType !== "contract-inter") {
-        if (careerLevel === "career-level-others") {
+        if (careerLevel === "career-level-others" && contractType !== "contract-apprentice") {
             if (workModality === "modality-hybrid") {
                 contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)\n`;
                 admissionKit += `Titulo: COLABORADOR | HIBRIDO\n`;
