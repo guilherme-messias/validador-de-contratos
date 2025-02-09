@@ -45,8 +45,11 @@ function admissionFilters(
     }
 
     if (workModality === "modality-home-office") {
-      contractCodes += `${contractModalityHomeOffice(careerLevel, contractType)}    
-      `;
+      const [code, kit] = contractModalityHomeOffice(careerLevel, contractType);
+
+      contractCodes += `${code}\n`;
+      admissionKit += `${kit}\n`;
+    }
     }
 
     if (workModality === "modality-hybrid") {
