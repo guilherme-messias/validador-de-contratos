@@ -16,14 +16,18 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 
 function admissionFilters(contractType: string, workModality: string, careerLevel: string): string {
   let contractCodes = "";
+  let admissionKit = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    contractCodes += `emp - Contrato de Trabalho_Empresa 039 (36255)
-  `;
+    contractCodes += `emp - Contrato de Trabalho_Empresa 039 (36255)\n`;
+  }
+
+  if (contractType === "contract-apprentice") {
+    admissionKit += `emp - Contrato de Aprendizagem_Empresa 039 (36256)\n`;
   }
 
   contractCodes += `${termOfWork(careerLevel, workModality, contractType)}
   `;
 
-  return contractCodes;
+  return `${contractCodes}\n${admissionKit}`;
 }

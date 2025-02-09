@@ -1,17 +1,48 @@
 export default function termOfWork(careerLevel, workModality, contractType) {
     let contractCodes = "";
+    let admissionKit = "";
     if (contractType !== "contract-inter") {
-        if (workModality === "modality-hybrid") {
-            contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)
-      `;
+        if (careerLevel === "career-level-others") {
+            if (workModality === "modality-hybrid") {
+                contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)\n`;
+                admissionKit += `Titulo: COLABORADOR | HIBRIDO\n`;
+            }
+            if (workModality === "modality-home-office") {
+                contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)\n`;
+                admissionKit += `Titulo: COLABORADOR | HOME-OFFICE\n`;
+            }
+            if (workModality === "modality-remote") {
+                contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)\n`;
+                admissionKit += `Titulo: COLABORADOR | TELETRABALHO\n`;
+            }
         }
-        if (workModality === "modality-home-office") {
-            contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)
-      `;
+        if (contractType === "contract-apprentice") {
+            if (workModality === "modality-hybrid") {
+                contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)
+        `;
+            }
+            if (workModality === "modality-home-office") {
+                contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)
+        `;
+            }
+            if (workModality === "modality-remote") {
+                contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)
+        `;
+            }
         }
-        if (workModality === "modality-remote") {
-            contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)
-      `;
+        if (contractType !== "contract-apprentice" && careerLevel !== "career-level-others") {
+            if (workModality === "modality-hybrid") {
+                contractCodes += `TERMO DE TRABALHO HIBRIDO (30822)
+        `;
+            }
+            if (workModality === "modality-home-office") {
+                contractCodes += `TERMO DE TELETRABALHO HOME OFFICE (30824)
+        `;
+            }
+            if (workModality === "modality-remote") {
+                contractCodes += `TERMO DE TELETRABALHO INTEGRAL (36910)
+        `;
+            }
         }
         contractCodes += `sis - AUTORIZAÇÃO PARA DESCONTO DE BENEFÍCIOS (31)
     `;
@@ -41,5 +72,5 @@ export default function termOfWork(careerLevel, workModality, contractType) {
       emp - 'TERMO CESSÃO DE NOME, IMAGEM E SOM DE VOZ (30170) 
       emp - 'TERMO DE CONFIDENCIALIDADE (30172) 
   `;
-    return contractCodes;
+    return [contractCodes, admissionKit];
 }
