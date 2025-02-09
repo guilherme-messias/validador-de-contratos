@@ -12,10 +12,10 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const isAdvocate = document.querySelector('input[name="flag"]:checked')
         .value;
     const position = document.getElementById("position").value;
-    const contractCodes = admissionFilters(contractType, workModality, careerLevel, position);
+    const contractCodes = admissionFilters(contractType, workModality, careerLevel, position, isAdvocate);
     console.log(contractCodes);
 });
-function admissionFilters(contractType, workModality, careerLevel, position) {
+function admissionFilters(contractType, workModality, careerLevel, position, isAdvocate) {
     let contractCodes = "";
     let admissionKit = "";
     function normalizePosition(position) {
@@ -52,7 +52,8 @@ function admissionFilters(contractType, workModality, careerLevel, position) {
     if (careerLevel === "career-level-director") {
         admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO\n`;
     }
-    contractCodes += `${termOfWork(contractType, careerLevel, normalizePosition(position))}
-  `;
+    const [code, kit] = termOfWork(contractType, careerLevel, normalizePosition(position), isAdvocate);
+    contractCodes += `${code}\n`;
+    admissionKit += `${kit}\n`;
     return `${contractCodes}\n${admissionKit}`;
 }
