@@ -57,24 +57,24 @@ export default function contract(
     if (department === "department-other") {
       if (workModality === "modality-hybrid") {
         contractCodes += `emp - CONTRATO HÍBRIDO - OCTADESK (34524)\n`;
-        admissionKit += `Titulo: COLABORADOR | HIBRIDO | 60/40\n`;
+        admissionKit += `Titulo: LIDER | HIBRIDO | 60/40\n`;
       }
 
       if (workModality === "modality-home-office") {
         contractCodes += `emp - CONTRATO TELETRABALHO - OCTADESK (33169)\n`;
-        admissionKit += `Titulo: COLABORADOR | HOME-OFFICE | 60/40\n`;
+        admissionKit += `Titulo: LIDER | HOME-OFFICE | 60/40\n`;
       }
     }
 
     if (department === "department-ii") {
       if (workModality === "modality-hybrid" && careerLevel === "career-level-coordinator") {
         contractCodes += `emp - CONTRATO HÍBRIDO - OCTADESK (34524)\n`;
-        admissionKit += `Titulo: COLABORADOR | HIBRIDO | 60/40\n`;
+        admissionKit += `Titulo: COORDENADOR VENDAS | HIBRIDO | 60/40\n`;
       }
 
       if (workModality === "modality-home-office" && careerLevel === "career-level-coordinator") {
         contractCodes += `emp - CONTRATO TELETRABALHO - OCTADESK (33169)\n`;
-        admissionKit += `Titulo: COLABORADOR | HOME-OFFICE | 60/40\n`;
+        admissionKit += `Titulo: COORDENADOR VENDAS | HOME-OFFICE | 60/40\n`;
       }
     }
   }
