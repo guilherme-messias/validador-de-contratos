@@ -79,7 +79,17 @@ export default function contract(
     }
   }
 
-  // aprendiz e estagiario e diretor
+  if (contractType === "contract-apprentice") {
+    admissionKit += `Titulo: APRENDIZ\n`;
+  }
+
+  if (contractType === "contract-inter") {
+    admissionKit += `Titulo: ESTAGIARIO\n`;
+  }
+
+  if (careerLevel === "career-level-director") {
+    admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO\n`;
+  }
 
   return [contractCodes, admissionKit];
 }
