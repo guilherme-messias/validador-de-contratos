@@ -18,6 +18,11 @@ export default function contract(
         contractCodes += `emp - CONTRATO HÍBRIDO - OCTADESK (34524)\n`;
         admissionKit += `Titulo: COLABORADOR | HIBRIDO\n`;
       }
+
+      if (workModality === "modality-hybrid" || careerLevel === "career-level-others") {
+        contractCodes += `emp - CONTRATO TELETRABALHO - OCTADESK (33169)\n`;
+        admissionKit += `Titulo: COLABORADOR - HOME-OFFICE\n`;
+      }
     }
   }
 
