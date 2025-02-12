@@ -14,11 +14,10 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 function admissionFilters(contractType, workModality, careerLevel, department) {
     let contractCodes = "";
     let admissionKit = "";
-    if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-        contractCodes += `${contract(contractType, workModality, department, careerLevel)}
-  `;
-    }
+    const [code, kit] = contract(contractType, workModality, department, careerLevel);
+    contractCodes += `${code}`;
+    admissionKit += `${kit}`;
     contractCodes += `${termOfWork(careerLevel, department)}
   `;
-    return contractCodes;
+    return `${contractCodes}\n${admissionKit}`;
 }
