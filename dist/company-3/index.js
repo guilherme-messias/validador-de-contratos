@@ -12,12 +12,10 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 });
 function admissionFilters(contractType, careerLevel, monthlyHours) {
     let contractCodes = "";
-        && ;
-    {
-        contractCodes += `${contract(monthlyHours, careerLevel, contractType)}
-    `;
-    }
-    contractCodes += `${termOfWork(careerLevel)}
-  `;
-    return contractCodes;
+    let admissionKit = "";
+    const [code, kit] = contract(monthlyHours, careerLevel, contractType);
+    contractCodes += `${code}`;
+    admissionKit += `${kit}`;
+    contractCodes += `${termOfWork(careerLevel)}`;
+    return `${contractCodes}\n${admissionKit}`;
 }

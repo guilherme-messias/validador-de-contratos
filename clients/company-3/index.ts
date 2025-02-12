@@ -17,14 +17,13 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 
 function admissionFilters(contractType: string, careerLevel: string, monthlyHours: string): string {
   let contractCodes = "";
+  let admissionKit = "";
 
-  && ) {
-    contractCodes += `${contract(monthlyHours, careerLevel, contractType)}
-    `;
-  }
+  const [code, kit] = contract(monthlyHours, careerLevel, contractType);
+  contractCodes += `${code}`;
+  admissionKit += `${kit}`;
 
-  contractCodes += `${termOfWork(careerLevel)}
-  `;
+  contractCodes += `${termOfWork(careerLevel)}`;
 
-  return contractCodes;
+  return `${contractCodes}\n${admissionKit}`;
 }
