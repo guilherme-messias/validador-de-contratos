@@ -1,4 +1,4 @@
-import contractMonthlyHours from "./filters/contractMonthlyHours.js";
+import contract from "./filters/contract.js";
 import termOfWork from "./filters/termOfWork.js";
 
 const btnNewQuery = document.getElementById("btn-new-query") as HTMLButtonElement;
@@ -18,8 +18,8 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 function admissionFilters(contractType: string, careerLevel: string, monthlyHours: string): string {
   let contractCodes = "";
 
-  if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    contractCodes += `${contractMonthlyHours(monthlyHours)}
+  && ) {
+    contractCodes += `${contract(monthlyHours, careerLevel, contractType)}
     `;
   }
 
