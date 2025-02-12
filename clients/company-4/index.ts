@@ -30,7 +30,6 @@ function admissionFilters(
   `;
   }
 
-
   contractCodes += `${termOfWork(careerLevel, department)}
   `;
 
