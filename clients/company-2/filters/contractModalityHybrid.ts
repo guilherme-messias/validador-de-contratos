@@ -1,6 +1,7 @@
 export default function contractModalityHybrid(
   careerLevel: string,
   contractType: string,
+  department: string,
   state: string
 ): [string, string] {
   let contractCodes = "";

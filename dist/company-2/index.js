@@ -19,15 +19,15 @@ function admissionFilters(contractType, workModality, careerLevel, department, s
     let admissionKit = "";
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
         if (workModality === "modality-office") {
-            contractCodes += `${contractModalityOffice(careerLevel, contractType, state)}
+            contractCodes += `${contractModalityOffice(careerLevel, contractType, department, state)}
   `;
         }
         if (workModality === "modality-home-office") {
-            contractCodes += `${contractModalityHomeOffice(careerLevel, contractType, state)}    
+            contractCodes += `${contractModalityHomeOffice(careerLevel, contractType, department, state)}    
       `;
         }
         if (workModality === "modality-hybrid") {
-            contractCodes += `${contractModalityHybrid(careerLevel, contractType, state)}
+            contractCodes += `${contractModalityHybrid(careerLevel, contractType, department, state)}
         `;
         }
     }

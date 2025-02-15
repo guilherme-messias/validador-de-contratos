@@ -1,4 +1,4 @@
-export default function contractModalityHybrid(careerLevel, contractType, state) {
+export default function contractModalityHybrid(careerLevel, contractType, department, state) {
     let contractCodes = "";
     let admissionKit = "";
     if (careerLevel !== "career-level-specialist-II" &&

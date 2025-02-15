@@ -1,4 +1,4 @@
-export default function contractModalityHomeOffice(careerLevel, contractType, state) {
+export default function contractModalityHomeOffice(careerLevel, contractType, department, state) {
     let contractCodes = "";
     let admissionKit = "";
     if (careerLevel !== "career-level-specialist-II" &&
