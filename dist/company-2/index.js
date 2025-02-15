@@ -13,7 +13,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const department = document.getElementById("department").value;
     const state = document.getElementById("state").value;
     const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, department, state);
-    divResultCodesAndKit.innerHTML = resultCodesAndKit;
+    divResultCodesAndKit.innerHTML = `${resultCodesAndKit[0]}<br>${resultCodesAndKit[1]}`;
 });
 function admissionFilters(contractType, workModality, careerLevel, department, state) {
     let contractCodes = "";
@@ -37,5 +37,5 @@ function admissionFilters(contractType, workModality, careerLevel, department, s
     }
     contractCodes += `${termOfWork(contractType, careerLevel, department)}
   `;
-    return `${contractCodes}\n${admissionKit}`;
+    return [contractCodes, admissionKit];
 }

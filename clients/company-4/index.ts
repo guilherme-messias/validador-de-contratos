@@ -35,5 +35,5 @@ function admissionFilters(
   contractCodes += `${termOfWork(careerLevel, department)}
   `;
 
-  return `${contractCodes}\n${admissionKit}`;
+  return `${contractCodes}<br>${admissionKit}`;
 }

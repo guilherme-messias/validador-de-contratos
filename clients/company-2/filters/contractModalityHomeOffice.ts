@@ -11,7 +11,7 @@ export default function contractModalityHomeOffice(
     (careerLevel === "career-level-others" || careerLevel === "career-level-director-CLT") &&
     contractType !== "contract-temporary"
   ) {
-    contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO(30514)\n`;
+    contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO(30514)<br>`;
     admissionKit += `Titulo: COLABORADOR | HOME-OFFICE`;
   }
 

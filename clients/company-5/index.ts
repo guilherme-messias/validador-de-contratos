@@ -54,35 +54,35 @@ function admissionFilters(
     if (workModality === "modality-office") {
       const [code, kit] = contractModalityOffice(careerLevel, contractType);
 
-      contractCodes += `${code}\n`;
-      admissionKit += `${kit}\n`;
+      contractCodes += `${code}<br>`;
+      admissionKit += `${kit}<br>`;
     }
 
     if (workModality === "modality-home-office") {
       const [code, kit] = contractModalityHomeOffice(careerLevel, contractType);
 
-      contractCodes += `${code}\n`;
-      admissionKit += `${kit}\n`;
+      contractCodes += `${code}<br>`;
+      admissionKit += `${kit}<br>`;
     }
 
     if (workModality === "modality-hybrid") {
       const [code, kit] = contractModalityHybrid(careerLevel, contractType);
 
-      contractCodes += `${code}\n`;
-      admissionKit += `${kit}\n`;
+      contractCodes += `${code}<br>`;
+      admissionKit += `${kit}<br>`;
     }
   }
 
   if (contractType === "contract-apprentice") {
-    admissionKit += `Titulo: APRENDIZ\n`;
+    admissionKit += `Titulo: APRENDIZ<br>`;
   }
 
   if (contractType === "contract-inter") {
-    admissionKit += `Titulo: ESTAGIARIO\n`;
+    admissionKit += `Titulo: ESTAGIARIO<br>`;
   }
 
   if (careerLevel === "career-level-director") {
-    admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO\n`;
+    admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO<br>`;
   }
 
   const [code, kit] = termOfWork(
@@ -92,8 +92,8 @@ function admissionFilters(
     isAdvocate
   );
 
-  contractCodes += `${code}\n`;
-  admissionKit += `${kit}\n`;
+  contractCodes += `${code}<br>`;
+  admissionKit += `${kit}<br>`;
 
-  return `${contractCodes}\n${admissionKit}`;
+  return `${contractCodes}<br>${admissionKit}`;
 }

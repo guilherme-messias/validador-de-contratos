@@ -22,13 +22,13 @@ function admissionFilters(contractType: string, workModality: string, careerLeve
   let admissionKit = "";
 
   if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
-    contractCodes += `emp - Contrato de Trabalho_Empresa 039 (36255)\n`;
+    contractCodes += `emp - Contrato de Trabalho_Empresa 039 (36255)<br>`;
   }
 
   const [code, kit] = termOfWork(careerLevel, workModality, contractType);
 
-  contractCodes += `${code}\n`;
-  admissionKit += `${kit}\n`;
+  contractCodes += `${code}<br>`;
+  admissionKit += `${kit}<br>`;
 
-  return `${contractCodes}\n${admissionKit}`;
+  return `${contractCodes}<br>${admissionKit}`;
 }

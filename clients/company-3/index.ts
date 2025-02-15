@@ -28,5 +28,5 @@ function admissionFilters(contractType: string, careerLevel: string, monthlyHour
 
   contractCodes += `${termOfWork(careerLevel)}`;
 
-  return `${contractCodes}\n${admissionKit}`;
+  return `${contractCodes}<br>${admissionKit}`;
 }
