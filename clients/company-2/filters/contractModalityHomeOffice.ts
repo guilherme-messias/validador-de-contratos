@@ -8,8 +8,7 @@ export default function contractModalityHomeOffice(
   let admissionKit = "";
 
   if (
-    careerLevel !== "career-level-specialist-II" &&
-    careerLevel !== "career-level-coordinator" &&
+    (careerLevel === "career-level-others" || careerLevel === "career-level-director-CLT") &&
     contractType !== "contract-temporary"
   ) {
     contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO(30514)\n`;
@@ -17,11 +16,19 @@ export default function contractModalityHomeOffice(
   }
 
   if (
-    (careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
+    (careerLevel === "career-level-specialist" || careerLevel === "career-level-tech-leader") &&
     contractType !== "contract-temporary"
   ) {
     contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO CARGO CONFIANÇA 60/40 (30515)`;
     admissionKit += `Titulo: 60/40 | HOME-OFFICE`;
+  }
+
+  if (
+    (careerLevel === "career-level-coordinator" || careerLevel === "career-level-manager") &&
+    contractType !== "contract-temporary"
+  ) {
+    contractCodes += `emp - **CONTRATO DE TRABALHO - TELETRABALHO CARGO CONFIANÇA 60/40 (30515)`;
+    admissionKit += `Titulo: 60/40 - LIDER | HOME-OFFICE`;
   }
 
   if (state === "state-curitiba") {
