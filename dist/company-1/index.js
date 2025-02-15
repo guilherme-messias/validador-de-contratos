@@ -4,6 +4,7 @@ import contractModalityOffice from "./filters/contractModalityOffice.js";
 import termOfWork from "./filters/termOfWork.js";
 const btnNewQuery = document.getElementById("btn-new-query");
 btnNewQuery.classList.add("hidden");
+const divResultCodesAndKit = document.getElementById("result-codes-and-kit");
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const contractType = document.getElementById("contract-type").value;
@@ -13,6 +14,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
         .value;
     const position = document.getElementById("position").value;
     const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, position, isAdvocate);
+    divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });
 function admissionFilters(contractType, workModality, careerLevel, position, isAdvocate) {
     let contractCodes = "";
