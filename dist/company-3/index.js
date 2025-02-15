@@ -7,8 +7,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const contractType = document.getElementById("contract-type").value;
     const careerLevel = document.getElementById("career-level").value;
     const monthlyHours = document.getElementById("monthly-hours").value;
-    const contractCodes = admissionFilters(contractType, careerLevel, monthlyHours);
-    console.log(contractCodes);
+    const resultCodesAndKit = admissionFilters(contractType, careerLevel, monthlyHours);
 });
 function admissionFilters(contractType, careerLevel, monthlyHours) {
     let contractCodes = "";

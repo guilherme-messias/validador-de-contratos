@@ -16,8 +16,13 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     .value;
   const position = (document.getElementById("position") as HTMLSelectElement).value;
 
-  const contractCodes = admissionFilters(contractType, workModality, careerLevel, position, isAdvocate);
-  console.log(contractCodes);
+  const resultCodesAndKit = admissionFilters(
+    contractType,
+    workModality,
+    careerLevel,
+    position,
+    isAdvocate
+  );
 });
 
 function admissionFilters(
@@ -76,7 +81,12 @@ function admissionFilters(
     admissionKit += `Titulo: DIRETOR S/ FGTS | SEM CONTRATO\n`;
   }
 
-  const [code, kit] = termOfWork(contractType, careerLevel, normalizePosition(position), isAdvocate);
+  const [code, kit] = termOfWork(
+    contractType,
+    careerLevel,
+    normalizePosition(position),
+    isAdvocate
+  );
 
   contractCodes += `${code}\n`;
   admissionKit += `${kit}\n`;

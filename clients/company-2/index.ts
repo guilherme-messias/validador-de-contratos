@@ -15,14 +15,13 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const department = (document.getElementById("department") as HTMLSelectElement).value;
   const state = (document.getElementById("state") as HTMLSelectElement).value;
 
-  const contractCodes = admissionFilters(
+  const resultCodesAndKit = admissionFilters(
     contractType,
     workModality,
     careerLevel,
     department,
     state
   );
-  console.log(contractCodes);
 });
 
 function admissionFilters(

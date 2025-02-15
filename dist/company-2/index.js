@@ -11,8 +11,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const careerLevel = document.getElementById("career-level").value;
     const department = document.getElementById("department").value;
     const state = document.getElementById("state").value;
-    const contractCodes = admissionFilters(contractType, workModality, careerLevel, department, state);
-    console.log(contractCodes);
+    const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, department, state);
 });
 function admissionFilters(contractType, workModality, careerLevel, department, state) {
     let contractCodes = "";

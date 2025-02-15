@@ -8,8 +8,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
     const department = document.getElementById("department").value;
-    const contractCodes = admissionFilters(contractType, workModality, careerLevel, department);
-    console.log(contractCodes);
+    const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, department);
 });
 function admissionFilters(contractType, workModality, careerLevel, department) {
     let contractCodes = "";
