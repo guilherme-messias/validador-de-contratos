@@ -1,6 +1,7 @@
 export default function contractModalityHomeOffice(
   careerLevel: string,
-  contractType: string
+  contractType: string,
+  state: string
 ): string {
   let contractCodes = "";
 

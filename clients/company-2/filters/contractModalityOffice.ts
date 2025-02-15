@@ -1,4 +1,4 @@
-export default function contractModalityOffice(careerLevel: string, contractType: string): string {
+export default function contractModalityOffice(careerLevel: string, contractType: string, state: string): string {
   let contractCodes = "";
   if (
     careerLevel !== "career-level-specialist-II" &&
