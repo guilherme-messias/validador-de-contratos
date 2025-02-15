@@ -1,12 +1,14 @@
 import termOfWork from "./filters/termOfWork.js";
 const btnNewQuery = document.getElementById("btn-new-query");
 btnNewQuery.classList.add("hidden");
+const divResultCodesAndKit = document.getElementById("result-codes-and-kit");
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const contractType = document.getElementById("contract-type").value;
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
     const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel);
+    divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });
 function admissionFilters(contractType, workModality, careerLevel) {
     let contractCodes = "";

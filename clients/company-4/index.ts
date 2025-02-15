@@ -4,6 +4,8 @@ import termOfWork from "./filters/termOfWork.js";
 const btnNewQuery = document.getElementById("btn-new-query") as HTMLButtonElement;
 btnNewQuery.classList.add("hidden");
 
+const divResultCodesAndKit = document.getElementById("result-codes-and-kit") as HTMLDivElement;
+
 document.getElementById("contract-details-form").addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -13,6 +15,8 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
   const department = (document.getElementById("department") as HTMLSelectElement).value;
 
   const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, department);
+
+  divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });
 
 function admissionFilters(
