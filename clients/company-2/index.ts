@@ -25,7 +25,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     state
   );
 
-  divResultCodesAndKit.innerHTML = `${resultCodesAndKit[0]}<br>${resultCodesAndKit[1]}`;
+  divResultCodesAndKit.innerHTML = `${resultCodesAndKit}`;
 });
 
 function admissionFilters(
@@ -34,7 +34,7 @@ function admissionFilters(
   careerLevel: string,
   department: string,
   state: string
-): [string, string] {
+): string {
   let contractCodes = "";
   let admissionKit = "";
 
@@ -69,5 +69,5 @@ function admissionFilters(
   contractCodes += `${termOfWork(contractType, careerLevel, department)}
   `;
 
-  return [contractCodes, admissionKit];
+  return `${contractCodes}<br>${admissionKit}`;
 }
