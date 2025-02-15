@@ -10,26 +10,28 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
     const department = document.getElementById("department").value;
-    const contractCodes = admissionFilters(contractType, workModality, careerLevel, department);
+    const state = document.getElementById("state").value;
+    const contractCodes = admissionFilters(contractType, workModality, careerLevel, department, state);
     console.log(contractCodes);
 });
-function admissionFilters(contractType, workModality, careerLevel, department) {
+function admissionFilters(contractType, workModality, careerLevel, department, state) {
     let contractCodes = "";
+    let admissionKit = "";
     if (contractType !== "contract-apprentice" && contractType !== "contract-inter") {
         if (workModality === "modality-office") {
-            contractCodes += `${contractModalityOffice(careerLevel, contractType)}
+            contractCodes += `${contractModalityOffice(careerLevel, contractType, state)}
   `;
         }
         if (workModality === "modality-home-office") {
-            contractCodes += `${contractModalityHomeOffice(careerLevel, contractType)}    
+            contractCodes += `${contractModalityHomeOffice(careerLevel, contractType, state)}    
       `;
         }
         if (workModality === "modality-hybrid") {
-            contractCodes += `${contractModalityHybrid(careerLevel, contractType)}
+            contractCodes += `${contractModalityHybrid(careerLevel, contractType, state)}
         `;
         }
     }
     contractCodes += `${termOfWork(contractType, careerLevel, department)}
   `;
-    return contractCodes;
+    return `${contractCodes}\n${admissionKit}`;
 }
