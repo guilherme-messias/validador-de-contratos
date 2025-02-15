@@ -5,18 +5,12 @@ export default function contractModalityHybrid(careerLevel, contractType, depart
         careerLevel !== "career-level-coordinator" &&
         contractType !== "contract-temporary") {
         contractCodes += `emp - CONTRATO DE TRABALHO HÍBRIDO lwsa - ATUALIZADO (36619)\n`;
-        admissionKit +=
-            state === "state-curitiba"
-                ? `Titulo: COLABORADOR | HIBRIDO | CURITIBA\n`
-                : `Titulo: COLABORADOR | HIBRIDO | OUTROS\n`;
+        admissionKit += `Titulo: COLABORADOR | HIBRIDO`;
     }
     if ((careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
         contractType !== "contract-temporary") {
         contractCodes += `emp - CONTRATO DE TRABALHO HÍBRIDO CARGO DE CONFIANÇA 60.40 LOCAWEB (36549)\n`;
-        admissionKit +=
-            state === "state-curitiba"
-                ? `Titulo: 60/40 | HIBRIDO | CURITIBA\n`
-                : `Titulo: 60/40 | HIBRIDO | OUTROS\n`;
+        admissionKit += `Titulo: 60/40 | HIBRIDO`;
     }
     if (careerLevel !== "career-level-specialist-II" &&
         careerLevel !== "career-level-coordinator" &&
@@ -26,6 +20,15 @@ export default function contractModalityHybrid(careerLevel, contractType, depart
     if ((careerLevel === "career-level-specialist-II" || careerLevel === "career-level-coordinator") &&
         contractType === "contract-temporary") {
         contractCodes += `emp - CONTRATO DE TRABALHO HÍBRIDO DETERMINADO 60.40 - ATUALIZADO (36621)\n`;
+    }
+    if (state === "state-curitiba") {
+        admissionKit += ` | CURTIBA`;
+    }
+    else {
+        admissionKit += ` | OUTROS`;
+    }
+    if (department !== "department-others") {
+        admissionKit += ` | VENDAS`;
     }
     return [contractCodes, admissionKit];
 }

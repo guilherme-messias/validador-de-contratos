@@ -21,5 +21,8 @@ export default function contractModalityOffice(careerLevel, contractType, depart
         contractType === "contract-temporary") {
         contractCodes += `emp - **CONTRATO DE TRABALHO - DETERMINADO CARGO CONFIANÇA 60/40 (30510)\n`;
     }
+    if (department !== "department-others") {
+        admissionKit += ` | VENDAS`;
+    }
     return [contractCodes, admissionKit];
 }
