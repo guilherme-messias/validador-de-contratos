@@ -9,4 +9,13 @@ body {
   background-color: #333;
 }
 
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ul li {
+  list-style-type: none;
+}
+
 /*# sourceMappingURL=style.css.map */

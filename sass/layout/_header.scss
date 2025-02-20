@@ -1,0 +1,15 @@
+nav {
+
+  
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // align-items: end;
+  li {
+    list-style-type: none;
+    // background-color: $primary-color;
+  }
+}
