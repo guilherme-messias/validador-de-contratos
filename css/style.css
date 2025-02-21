@@ -30,6 +30,11 @@ nav {
   background-color: #3e78b2;
   color: #f2f2f2;
   padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+nav h3 {
+  flex-grow: 1;
 }
 
 ul {
