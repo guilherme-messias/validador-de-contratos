@@ -44,6 +44,11 @@ main h1 {
   padding: 1.5rem;
 }
 
+#company-selection {
+  padding: 2rem;
+  align-items: center;
+}
+
 footer {
   min-height: 5vh;
   background-color: #3e78b2;

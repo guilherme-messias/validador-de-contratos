@@ -1,4 +1,4 @@
-@use '../theme/colors' as *;
+@use "../theme/colors" as *;
 
 main {
   min-height: 75vh;
@@ -9,6 +9,7 @@ main {
   }
 }
 
-label {
-
+#company-selection {
+  padding: 2rem;
+  align-items: center;
 }
