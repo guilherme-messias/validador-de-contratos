@@ -1,6 +1,8 @@
+@use "../theme/colors" as *;
+
 nav {
-  background-color: black;
-  color: white;
+  background-color: $primary-color;
+  color: $secondary-color;
   padding: 0.8rem;
 }
 
@@ -16,4 +18,7 @@ ul {
   }
 }
 
-// todo: adicionar menu hamburguer
+a {
+  text-decoration: none;
+  color: $secondary-color;
+}
