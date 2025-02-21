@@ -37,16 +37,22 @@ a {
 }
 
 main {
-  min-height: 75vh;
+  min-height: 70vh;
 }
 main h1 {
   color: #3e78b2;
+  font-size: 2.5rem;
   padding: 1.5rem;
 }
 
 #company-selection {
   padding: 2rem;
   align-items: center;
+}
+#company-selection label {
+  color: #3e78b2;
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 footer {

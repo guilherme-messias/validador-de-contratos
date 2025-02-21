@@ -1,10 +1,11 @@
 @use "../theme/colors" as *;
 
 main {
-  min-height: 75vh;
+  min-height: 70vh;
 
   h1 {
     color: $primary-color;
+    font-size: 2.5rem;
     padding: 1.5rem;
   }
 }
@@ -12,4 +13,10 @@ main {
 #company-selection {
   padding: 2rem;
   align-items: center;
+
+  label {
+    color: $primary-color;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
 }
