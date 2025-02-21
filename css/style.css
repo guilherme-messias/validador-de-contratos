@@ -41,12 +41,12 @@ main {
 }
 
 footer {
+  min-height: 5vh;
   background-color: #3e78b2;
   color: #f2f2f2;
   padding: 3.5rem;
   margin: 2rem 0 0 0;
   text-align: center;
-  min-height: 5vh;
 }
 
 /*# sourceMappingURL=style.css.map */
