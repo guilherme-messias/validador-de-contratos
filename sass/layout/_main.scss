@@ -1,3 +1,14 @@
+@use '../theme/colors' as *;
+
 main {
   min-height: 75vh;
+
+  h1 {
+    color: $primary-color;
+    padding: 1.5rem;
+  }
+}
+
+label {
+
 }

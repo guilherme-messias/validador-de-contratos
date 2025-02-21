@@ -39,6 +39,10 @@ a {
 main {
   min-height: 75vh;
 }
+main h1 {
+  color: #3e78b2;
+  padding: 1.5rem;
+}
 
 footer {
   min-height: 5vh;
