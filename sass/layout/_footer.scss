@@ -1,0 +1,7 @@
+@use "../theme/colors" as *;
+
+footer {
+  background-color: $primary-color;
+  padding: 3.5rem;
+  margin: 2rem 0;
+}
