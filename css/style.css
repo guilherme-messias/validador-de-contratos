@@ -67,11 +67,16 @@ main h1 {
   font-size: 1.5rem;
   margin-right: 1rem;
 }
-#company-selection #company-form {
+
+#company-form {
   display: flex;
   flex-direction: column;
   padding: 3rem;
   gap: 1rem;
+}
+#company-form select {
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 footer {
