@@ -9,6 +9,19 @@ body {
   background-color: #333;
 }
 
+button {
+  background-color: #dda448;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #bb342f;
+}
+
 header {
   min-height: 15vh;
 }
