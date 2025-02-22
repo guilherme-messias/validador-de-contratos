@@ -4,7 +4,6 @@ import contractModalityOffice from "./filters/contractModalityOffice.js";
 import termOfWork from "./filters/termOfWork.js";
 
 const btnNewQuery = document.getElementById("btn-new-query") as HTMLButtonElement;
-btnNewQuery.classList.add("hidden");
 
 const divResultCodesAndKit = document.getElementById("result-codes-and-kit") as HTMLDivElement;
 
@@ -25,6 +24,8 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     position,
     isAdvocate
   );
+
+  btnNewQuery.style.display = "block";
 
   divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });
