@@ -77,7 +77,13 @@ main h1 {
   padding: 3rem;
   gap: 1rem;
 }
-#company-form select {
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+input {
   padding: 0.5rem;
   font-size: 1rem;
 }
@@ -85,6 +91,8 @@ main h1 {
 #contract-details-form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 
