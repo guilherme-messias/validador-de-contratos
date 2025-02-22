@@ -33,6 +33,12 @@ main {
   }
 }
 
+#contract-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
 
 // todo: estilizar modo escuro
 // todo: estilizar modo tablet, desktop

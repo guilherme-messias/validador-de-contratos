@@ -82,6 +82,12 @@ main h1 {
   font-size: 1rem;
 }
 
+#contract-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 footer {
   min-height: 1.8vh;
   background-color: #3e78b2;
