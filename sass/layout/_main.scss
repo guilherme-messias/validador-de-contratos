@@ -46,5 +46,12 @@ input {
   gap: 1rem;
 }
 
+#result-codes-and-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
 // todo: estilizar modo escuro
 // todo: estilizar modo tablet, desktop

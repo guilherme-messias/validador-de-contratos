@@ -96,6 +96,13 @@ input {
   gap: 1rem;
 }
 
+#result-codes-and-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
 footer {
   min-height: 1.8vh;
   background-color: #3e78b2;
