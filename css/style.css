@@ -103,6 +103,10 @@ input {
   padding: 2rem;
 }
 
+#btn-new-query {
+  display: none;
+}
+
 footer {
   min-height: 1.8vh;
   background-color: #3e78b2;
