@@ -16,6 +16,9 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     btnNewQuery.style.display = "block";
     divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });
+btnNewQuery.addEventListener("click", () => {
+    window.location.reload();
+});
 function admissionFilters(contractType, workModality, careerLevel, position, isAdvocate) {
     let contractCodes = "";
     let admissionKit = "";
