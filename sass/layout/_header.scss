@@ -9,12 +9,8 @@ nav {
   color: $secondary-color;
   padding: 0.8rem;
   display: flex;
-  flex-direction: column;
-
-  h3 {
-    flex-grow: 1;
-    // todo: alinhar o item na mesma linha que o ul
-  }
+  justify-content: space-between;
+  align-items: center;
 }
 
 ul {
