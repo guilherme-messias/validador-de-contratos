@@ -22,6 +22,19 @@ button:hover {
   background-color: #bb342f;
 }
 
+input[type=button] {
+  background-color: black;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input[type=button]:hover {
+  background-color: #bb342f;
+}
+
 header {
   min-height: 15vh;
 }
