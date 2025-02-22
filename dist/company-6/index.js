@@ -8,7 +8,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const workModality = document.getElementById("work-modality").value;
     const careerLevel = document.getElementById("career-level").value;
     const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel);
+    btnNewQuery.style.display = "block";
     divResultCodesAndKit.innerHTML = resultCodesAndKit;
+});
+btnNewQuery.addEventListener("click", () => {
+    window.location.reload();
 });
 function admissionFilters(contractType, workModality, careerLevel) {
     let contractCodes = "";

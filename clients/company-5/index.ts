@@ -26,7 +26,13 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     isAdvocate
   );
 
+  btnNewQuery.style.display = "block";
+
   divResultCodesAndKit.innerHTML = resultCodesAndKit;
+});
+
+btnNewQuery.addEventListener("click", () => {
+  window.location.reload();
 });
 
 function admissionFilters(

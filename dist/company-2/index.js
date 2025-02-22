@@ -13,7 +13,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     const department = document.getElementById("department").value;
     const state = document.getElementById("state").value;
     const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, department, state);
-    divResultCodesAndKit.innerHTML = `${resultCodesAndKit}`;
+    btnNewQuery.style.display = "block";
+    divResultCodesAndKit.innerHTML = resultCodesAndKit;
+});
+btnNewQuery.addEventListener("click", () => {
+    window.location.reload();
 });
 function admissionFilters(contractType, workModality, careerLevel, department, state) {
     let contractCodes = "";

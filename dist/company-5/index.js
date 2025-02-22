@@ -14,7 +14,11 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
         .value;
     const position = document.getElementById("position").value;
     const resultCodesAndKit = admissionFilters(contractType, workModality, careerLevel, position, isAdvocate);
+    btnNewQuery.style.display = "block";
     divResultCodesAndKit.innerHTML = resultCodesAndKit;
+});
+btnNewQuery.addEventListener("click", () => {
+    window.location.reload();
 });
 function admissionFilters(contractType, workModality, careerLevel, position, isAdvocate) {
     let contractCodes = "";

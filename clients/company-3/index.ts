@@ -15,7 +15,13 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 
   const resultCodesAndKit = admissionFilters(contractType, careerLevel, monthlyHours);
 
+  btnNewQuery.style.display = "block";
+
   divResultCodesAndKit.innerHTML = resultCodesAndKit;
+});
+
+btnNewQuery.addEventListener("click", () => {
+  window.location.reload();
 });
 
 function admissionFilters(contractType: string, careerLevel: string, monthlyHours: string): string {

@@ -25,7 +25,13 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     state
   );
 
-  divResultCodesAndKit.innerHTML = `${resultCodesAndKit}`;
+  btnNewQuery.style.display = "block";
+
+  divResultCodesAndKit.innerHTML = resultCodesAndKit;
+});
+
+btnNewQuery.addEventListener("click", () => {
+  window.location.reload();
 });
 
 function admissionFilters(
