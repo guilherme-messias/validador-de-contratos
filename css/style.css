@@ -149,4 +149,11 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  footer {
+    padding: 3.5rem;
+    margin: 8rem 0 0 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
