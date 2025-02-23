@@ -53,11 +53,15 @@ input {
   padding: 2rem;
 }
 
-#btn-new-query {
-  display: none;
+#div-new-query {
+  display: flex;
   flex-direction: column;
   align-items: center;
-//  todo: adicionar centralização
+  padding: 1.5rem;
+}
+
+#btn-new-query {
+  display: none;
 }
 
 // todo: estilizar modo escuro
