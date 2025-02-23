@@ -79,6 +79,14 @@ a {
     font-size: 1.6rem;
   }
 }
+@media (min-width: 1024px) {
+  nav {
+    padding: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
 main {
   min-height: 70vh;
 }
