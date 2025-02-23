@@ -25,7 +25,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     state
   );
 
-  btnNewQuery.style.display = "block";
+  btnNewQuery.style.display = "flex";
 
   divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });

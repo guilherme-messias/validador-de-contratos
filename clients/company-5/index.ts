@@ -26,7 +26,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
     isAdvocate
   );
 
-  btnNewQuery.style.display = "block";
+  btnNewQuery.style.display = "flex";
 
   divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });

@@ -15,7 +15,7 @@ document.getElementById("contract-details-form").addEventListener("submit", (eve
 
   const resultCodesAndKit = admissionFilters(contractType, careerLevel, monthlyHours);
 
-  btnNewQuery.style.display = "block";
+  btnNewQuery.style.display = "flex";
 
   divResultCodesAndKit.innerHTML = resultCodesAndKit;
 });
