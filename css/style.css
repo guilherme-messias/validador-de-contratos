@@ -238,7 +238,7 @@ footer {
 }
 @media (min-width: 1024px) {
   footer {
-    padding: 3.4rem;
+    padding: 3rem;
     margin: 10rem 0 0 0;
   }
 }
