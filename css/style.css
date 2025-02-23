@@ -172,6 +172,12 @@ input {
     margin: 4rem;
     gap: 3rem;
   }
+  #contract-details-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
 }
 footer {
   min-height: 1.8vh;
