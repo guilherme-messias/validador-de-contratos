@@ -29,3 +29,20 @@ a {
   text-decoration: none;
   color: $secondary-color;
 }
+
+@media (min-width: 768px) {
+  nav {
+    padding: 2rem;
+  }
+
+  Ul {
+    gap: 3rem;
+  }
+  li {
+    padding: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+}
