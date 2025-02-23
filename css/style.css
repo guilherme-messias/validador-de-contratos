@@ -140,6 +140,30 @@ input {
   display: none;
 }
 
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  select {
+    padding: 1rem 10rem;
+    font-size: 1.3rem;
+  }
+  #company-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #company-selection label {
+    font-size: 2rem;
+    margin: 1.5rem;
+  }
+  #company-selection button {
+    font-size: 1.3rem;
+    margin: 3rem;
+  }
+}
 footer {
   min-height: 1.8vh;
   background-color: #3e78b2;

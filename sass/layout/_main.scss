@@ -65,31 +65,38 @@ input {
 }
 
 @media (min-width: 768px) {
-  // main {
-  //   min-height: 80vh;
-  // }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  // h1 {
-  //   font-size: 3rem;
-  // }
+  select {
+    padding: 1rem 10rem;
+    font-size: 1.3rem;
 
-  // select {
-  //   padding: 1rem;
-  //   font-size: 1.5rem;
-  // }
+  }
 
   // input {
   //   padding: 1rem;
   //   font-size: 1.5rem;
   // }
 
-  // #company-selection {
-  //   padding: 3rem;
+  #company-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
-  //   label {
-  //     font-size: 2rem;
-  //   }
-  // }
+    label {
+      font-size: 2rem;
+      margin: 1.5rem;
+    }
+
+    button {
+      font-size: 1.3rem;
+      margin: 3rem;
+    }
+  }
 
   // #company-form {
   //   padding: 4rem;
@@ -112,7 +119,6 @@ input {
   //     font-size: 1.5rem;
   //   }
   // }
-  
 }
 
 // todo: estilizar modo escuro
