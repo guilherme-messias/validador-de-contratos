@@ -169,7 +169,6 @@ input {
     margin: 3rem;
   }
   #contract-details-form {
-    margin: 4rem;
     gap: 3rem;
   }
   #contract-details-form label {
@@ -177,6 +176,21 @@ input {
     flex-direction: column;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+  #contract-details-form input {
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+  }
+  #result-codes-and-kit {
+    padding: 5rem;
+    font-size: 1.3rem;
+  }
+  #div-new-query {
+    padding: 2rem;
+  }
+  #div-new-query #btn-new-query {
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
   }
 }
 footer {

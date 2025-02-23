@@ -99,7 +99,6 @@ input {
   }
 
   #contract-details-form {
-    margin: 4rem;
     gap: 3rem;
 
     label {
@@ -108,26 +107,26 @@ input {
       margin-bottom: 1rem;
       font-size: 1.3rem;
     }
+
+    input {
+      padding: 1rem 5rem;
+      font-size: 1.5rem;
+    }
   }
 
-  // #result-codes-and-kit {
-  //   padding: 3rem;
-  // }
+  #result-codes-and-kit {
+    padding: 5rem;
+    font-size: 1.3rem;
+  }
 
-  // #div-new-query {
-  //   padding: 2rem;
+  #div-new-query {
+    padding: 2rem;
 
-  //   #btn-new-query {
-  //     display: block;
-  //     padding: 1rem;
-  //     font-size: 1.5rem;
-  //   }
-
-  // input {
-  //   padding: 1rem;
-  //   font-size: 1.5rem;
-  // }
-  // }
+    #btn-new-query {
+      padding: 1.2rem 3rem;
+      font-size: 1.5rem;
+    }
+  }
 }
 
 // todo: estilizar modo escuro
