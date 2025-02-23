@@ -69,12 +69,17 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5rem;
+
+    h1 {
+      font-size: 3rem;
+      padding: 3rem;
+    }
   }
 
   select {
     padding: 1rem 10rem;
     font-size: 1.3rem;
-
   }
 
   // input {
