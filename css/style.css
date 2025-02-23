@@ -168,6 +168,10 @@ input {
     font-size: 1.3rem;
     margin: 3rem;
   }
+  #contract-details-form {
+    margin: 4rem;
+    gap: 3rem;
+  }
 }
 footer {
   min-height: 1.8vh;

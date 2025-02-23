@@ -82,10 +82,7 @@ input {
     font-size: 1.3rem;
   }
 
-  // input {
-  //   padding: 1rem;
-  //   font-size: 1.5rem;
-  // }
+
 
   #company-selection {
     display: flex;
@@ -103,13 +100,10 @@ input {
     }
   }
 
-  // #company-form {
-  //   padding: 4rem;
-  // }
-
-  // #contract-details-form {
-  //   gap: 2rem;
-  // }
+  #contract-details-form {
+    margin: 4rem;
+    gap: 3rem;
+  }
 
   // #result-codes-and-kit {
   //   padding: 3rem;
@@ -123,6 +117,11 @@ input {
   //     padding: 1rem;
   //     font-size: 1.5rem;
   //   }
+
+    // input {
+  //   padding: 1rem;
+  //   font-size: 1.5rem;
+  // }
   // }
 }
 
