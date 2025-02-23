@@ -131,7 +131,12 @@ input {
 
 @media (min-width: 1024px) {
   main {
-    padding: 3rem;
+    padding: 1rem;
+
+    h1 {
+      padding: 1.5rem;
+      margin-top: 2.5rem;
+    }
   }
 
   select {
@@ -141,6 +146,7 @@ input {
 
   #company-selection {
     gap: 1rem;
+    padding: 0;
 
     label {
       margin: 1rem;

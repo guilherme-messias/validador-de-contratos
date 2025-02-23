@@ -81,7 +81,7 @@ a {
 }
 @media (min-width: 1024px) {
   nav {
-    padding: 3rem;
+    padding: 2rem;
   }
   h3 {
     font-size: 2rem;
@@ -203,7 +203,11 @@ input {
 }
 @media (min-width: 1024px) {
   main {
-    padding: 3rem;
+    padding: 1rem;
+  }
+  main h1 {
+    padding: 1.5rem;
+    margin-top: 2.5rem;
   }
   select {
     padding: 0.5rem 10rem;
@@ -211,6 +215,7 @@ input {
   }
   #company-selection {
     gap: 1rem;
+    padding: 0;
   }
   #company-selection label {
     margin: 1rem;
@@ -233,7 +238,7 @@ footer {
 }
 @media (min-width: 1024px) {
   footer {
-    padding: 4rem;
+    padding: 3.4rem;
     margin: 10rem 0 0 0;
   }
 }
