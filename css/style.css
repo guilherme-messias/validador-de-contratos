@@ -201,6 +201,21 @@ input {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 1024px) {
+  main {
+    padding: 3rem;
+  }
+  select {
+    padding: 0.5rem 10rem;
+    font-size: 1.2rem;
+  }
+  #company-selection {
+    gap: 1rem;
+  }
+  #company-selection label {
+    margin: 1rem;
+  }
+}
 footer {
   min-height: 1.8vh;
   background-color: #3e78b2;

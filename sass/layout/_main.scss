@@ -130,7 +130,22 @@ input {
 }
 
 @media (min-width: 1024px) {
+  main {
+    padding: 3rem;
+  }
 
+  select {
+    padding: 0.5rem 10rem;
+    font-size: 1.2rem;
+  }
+
+  #company-selection {
+    gap: 1rem;
+
+    label {
+      margin: 1rem;
+    }
+  }
 }
 
 // todo: estilizar modo escuro
