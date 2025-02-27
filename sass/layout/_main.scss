@@ -152,8 +152,13 @@ input {
       margin: 1rem;
     }
   }
-  // todo: tirar espaçamento do footer
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
+  }
 }
 
 // todo: estilizar modo escuro
-// todo: estilizar modo tablet, desktop

@@ -37,6 +37,7 @@ input[type=button]:hover {
 
 header {
   min-height: 15vh;
+  padding-bottom: 8rem;
 }
 
 nav {
@@ -219,6 +220,12 @@ input {
   }
   #company-selection label {
     margin: 1rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
   }
 }
 footer {
