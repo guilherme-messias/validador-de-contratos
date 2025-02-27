@@ -228,6 +228,12 @@ input {
     color: white;
   }
 }
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #121212;
+  }
+}
 footer {
   min-height: 1.8vh;
   background-color: #3e78b2;

@@ -161,4 +161,9 @@ input {
   }
 }
 
-// todo: estilizar modo escuro
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #121212;
+  }
+}
