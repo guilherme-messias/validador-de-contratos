@@ -225,20 +225,18 @@ footer {
   min-height: 1.8vh;
   background-color: #3e78b2;
   color: #f2f2f2;
-  padding: 2.5rem;
-  margin: 2rem 0 0 0;
+  padding: 2rem;
+  margin: 5rem 0 0 0;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   footer {
-    padding: 5rem;
     margin: 8rem 0 0 0;
   }
 }
 @media (min-width: 1024px) {
   footer {
-    padding: 3rem;
     margin: 10rem 0 0 0;
   }
 }
