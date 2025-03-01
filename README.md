@@ -9,10 +9,8 @@ O Validador de Contratos é uma ferramenta desenvolvida para o setor de departam
 - Proporciona um processo mais ágil e eficiente, eliminando a necessidade de consultas manuais.
 
 ## 🛠️ Tecnologias Utilizadas
-- **HTML**
-- **CSS**
-- **JavaScript (puro)**
-- **Bootstrap** (para estilização e design responsivo)
+- **Typescript**
+- **Sass**
 
 ## 📦 Instalação
 
