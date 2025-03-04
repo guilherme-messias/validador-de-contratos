@@ -1,4 +1,4 @@
-# Projeto 1
+# Validador de Contratos
 
 ## Descrição
 O Validador de Contratos é uma ferramenta desenvolvida para o setor de departamento pessoal, projetada para automatizar e simplificar o processo de identificação dos contratos, termos e aditivos necessários para cada colaborador, eliminando o trabalho manual. Com base na unidade e nos dados fornecidos, o projeto identifica dinamicamente as regras específicas e apresenta os documentos corretos, otimizando o fluxo de trabalho e reduzindo erros.
